@@ -1,0 +1,65 @@
+@import './libs/reset.css';
+@import './libs/swiper.css';
+@import './app/fonts.css';
+@import './app/app.css';
+@import './app/base.css';
+@import './app/carousel.css';
+@import './app/modal.css';
+
+/*! 
+    index
+    Estilos específicos de cada infográfico devem ser escritos neste documento, no espaço abaixo.
+    Estilos de index sobrescrevem estilos básicos.
+*/
+
+/*! 
+    360px 
+*/
+@media screen and (min-width: 22.5em) {
+}
+
+/*! 
+    425px 
+*/
+@media screen and (min-width: 26.563em) {
+}
+
+/*! 
+    768px 
+*/
+@media screen and (min-width: 48em) {
+}
+
+/*! 
+    980px 
+*/
+@media screen and (min-width: 61.25em) {
+}
+
+/*! 
+    1200px 
+*/
+@media screen and (min-width: 75em) {
+}
+
+/*! 
+    1280px 
+*/
+@media screen and (min-width: 80em) {
+}
+
+/*! 
+    1374px 
+*/
+@media screen and (min-width: 85.875em) {
+}
+
+/*! 
+    1440px 
+*/
+@media screen and (min-width: 90em) {
+}
+
+/*! 
+    \\\\ index
+*/

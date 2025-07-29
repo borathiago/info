@@ -1,0 +1,403 @@
+/*! 
+    modal
+    Arquivo com estilos básicos e animações de modal
+    Não deve ser alterado
+*/
+
+.modal-container {
+    position: absolute;
+    transition: all ease-in-out 500ms;
+}
+
+.modal-hide {
+    transition: all ease-in-out 325ms;
+}
+
+.modal-closed {
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.translatey {
+    transform: translateY(2%);
+}
+
+.-translatey {
+    transform: translateY(-2%);
+}
+
+.translatex {
+    transform: translateX(50%);
+}
+
+.-translatex {
+    transform: translateX(-50%);
+}
+
+.modal-oppened {
+    transform: translateX(0) translateY(0);
+    z-index: 999 !important;
+}
+
+.modal-oppened.translatey {
+    animation: translatey 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.-translatey {
+    animation: -translatey 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.translatex {
+    animation: translatex 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.-translatex {
+    animation: -translatex 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.translatey.return {
+    animation: return-translatey 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.-translatey.return {
+    animation: -return-translatey 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.translatex.return {
+    animation: return-translatex 750ms ease-in-out 0ms 1 forwards;
+}
+
+.modal-oppened.-translatex.return {
+    animation: -return-translatex 750ms ease-in-out 0ms 1 forwards;
+}
+
+.button-close {
+    position: absolute;
+    z-index: -20 !important;
+    cursor: pointer;
+}
+
+.absolute.button-close {
+    z-index: -20 !important;
+}
+
+.button-close.rotate {
+    transform: rotate(135deg);
+}
+
+.button-close.rotate.scale {
+    transform: rotate(135deg) scale(0.9);
+}
+
+.modal-oppened .button-close.rotate.scale {
+    transform: rotate(135deg) scale(1);
+    z-index: 99999 !important;
+}
+
+.button-close.button-top,
+.button-open.button-top {
+    top: 3%;
+}
+
+.button-close.button-right,
+.button-open.button-right {
+    right: 2%;
+}
+
+.button-close.button-left,
+.button-open.button-left {
+    left: 2%;
+}
+
+.button-close.-button-top,
+.button-open.-button-top {
+    top: -3%;
+}
+
+.button-close.-button-right,
+.button-open.-button-right {
+    right: -2%;
+}
+
+.button-close.-button-left,
+.button-open.-button-left {
+    left: -2%;
+}
+
+.button-close ~ img {
+    pointer-events: none !important;
+}
+
+.button-open {
+    width: 2.25em;
+    cursor: pointer;
+}
+
+.icons-wrapper {
+    z-index: 1;
+}
+
+.icons-wrapper.hidden {
+    z-index: -1 !important;
+}
+
+.icon-modal {
+    transition: all ease-in-out 200ms;
+}
+
+.open-modal,
+.close-modal,
+.modal {
+    transition: all ease-in-out 500ms;
+}
+
+.close-modal {
+    transition: all ease-in-out 400ms;
+    cursor: pointer;
+}
+
+.modal-oppened .close-modal {
+    z-index: 9999 !important;
+}
+
+.button-close.rotate {
+    transform: rotate(135deg);
+}
+
+.transition-all.hide-all {
+    transition-duration: 80ms;
+}
+
+@media screen and (min-width: 48em /* 768px */) {
+    .button-close,
+    .button-open {
+        width: 3em;
+    }
+}
+
+@media screen and (min-width: 61.25em /* 980px */) {
+    .button-close,
+    .button-open {
+        width: 2.75em;
+    }
+
+    .button-close.button-top,
+    .button-open.button-top {
+        top: 3%;
+    }
+
+    .button-close.button-right,
+    .button-open.button-right {
+        right: 1.5%;
+    }
+
+    .button-close.button-left,
+    .button-open.button-left {
+        left: 1.5%;
+    }
+
+    .button-open {
+        width: 2.75em;
+    }
+}
+
+@media screen and (min-width: 90em /* 1440px */) {
+    .button-close,
+    .button-open {
+        width: 3em;
+    }
+}
+
+@media screen and (min-width: 100em /* 1600px */) {
+    .button-close,
+    .button-open {
+        width: 3.25em;
+    }
+}
+
+@media screen and (min-width: 120em /* 1920px */) {
+    .button-close,
+    .button-open {
+        width: 3.5em;
+    }
+}
+
+@keyframes translatey {
+    0% {
+        transform: translateY(2%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes translatey {
+    0% {
+        transform: translateY(2%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes -translatey {
+    0% {
+        transform: translateY(-2%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes -translatey {
+    0% {
+        transform: translateY(-2%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes translatex {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes translatex {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes -translatex {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes -translatex {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes return-translatey {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(2%);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes return-translatey {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(2%);
+        opacity: 0;
+    }
+}
+
+@keyframes -return-translatey {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-2%);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes -return-translatey {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-2%);
+        opacity: 0;
+    }
+}
+
+@keyframes return-translatex {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes return-translatex {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes -return-translatex {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes -return-translatex {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+
+/*! 
+    \\\\ modal
+*/
