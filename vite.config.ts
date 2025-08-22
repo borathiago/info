@@ -6,6 +6,10 @@ export default defineConfig({
     base: './',
     resolve: {},
     root: './info',
+    server: {
+        port: 5180,
+        host: true
+    },
     build: {
         cssCodeSplit: false,
         outDir: '../@production',
