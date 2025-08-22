@@ -49,31 +49,31 @@
     top: 0;
 }
 
-#electrolux-02 {
+section {
     width: 100%;
     padding: 0 !important;
 }
 
-#electrolux-02 #video.video-full-width {
+section #video.video-full-width {
     width: 100%;
     max-width: 100%;
     aspect-ratio: 16 / 9;
     margin: 0 auto -0.375em !important;
 }
 
-#electrolux-02 #video.video-full-width iframe {
+section #video.video-full-width iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
 }
 
-#electrolux-02 #video.video-framed-width {
+section #video.video-framed-width {
     width: 82.86%;
     max-width: 82.86%;
     aspect-ratio: 16 / 9;
     margin: 12% auto;
 }
 
-#electrolux-02 #video.video-framed-width iframe {
+section #video.video-framed-width iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
 }
