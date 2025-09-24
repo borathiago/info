@@ -12,6 +12,8 @@
         "fix:all": "prettier . --write && eslint --fix",
         "dev": "vite",
         "build": "concurrently \"npm run fix:all\" \"tsc && vite build --mode production --emptyOutDir\"",
+        "build:deploy": "tsc && vite build --mode production --emptyOutDir",
+        "deploy": "node deploy.mjs",
         "preview": "vite preview"
     },
     "devDependencies": {
@@ -20,7 +22,6 @@
         "@types/node": "^22.10.10",
         "@typescript-eslint/eslint-plugin": "^8.23.0",
         "@typescript-eslint/parser": "^8.23.0",
-        "@vitejs/plugin-legacy": "^6.0.2",
         "concurrently": "^9.1.2",
         "eslint": "^9.19.0",
         "eslint-config-prettier": "^10.0.1",
@@ -35,8 +36,7 @@
         "vite-plugin-static-copy": "^2.2.0"
     },
     "dependencies": {
-        "axios": "^1.8.4",
-        "pino": "^9.6.0",
+        "@arizona/config-schemas": "github:borathiago/config-schemas#main",
         "swiper": "^11.2.1",
         "zod": "^3.24.2"
     }

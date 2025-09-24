@@ -1,0 +1,21 @@
+{
+    "bucketUrl": "https://storage.googleapis.com/bucket-testehtml8978/teste/electrolux",
+    "assetsUrl": "https://storage.googleapis.com/bucket-testehtml8978/teste/electrolux",
+    "artifactId": "artifact-3456-projetofenix-1756933885843",
+    "productionDir": "@production",
+    "files": {
+        "index": "index.html"
+    },
+    "options": {
+        "removeComments": true
+    },
+    "paths": {
+        "imagesToReplace": [
+            "src=\"./img",
+            "url('./img",
+            "'./img/",
+            "\"./img/"
+        ],
+        "configFile": "info/ts/config.ts"
+    }
+}

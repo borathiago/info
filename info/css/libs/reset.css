@@ -3,87 +3,7 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+#artifact * {
     margin: 0;
     padding: 0;
     border: 0;
@@ -91,39 +11,45 @@ video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+#artifact article,
+#artifact aside,
+#artifact details,
+#artifact figcaption,
+#artifact figure,
+#artifact footer,
+#artifact header,
+#artifact hgroup,
+#artifact menu,
+#artifact nav,
+#artifact section {
     display: block;
 }
-body {
+
+#artifact {
     line-height: 1;
 }
-ol,
-ul {
+
+#artifact ol,
+#artifact ul {
     list-style: none;
 }
-blockquote,
-q {
+
+#artifact blockquote,
+#artifact q {
     quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+#artifact blockquote:before,
+#artifact blockquote:after,
+#artifact q:before,
+#artifact q:after {
     content: '';
     content: none;
 }
-table {
+
+#artifact table {
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -137,12 +63,6 @@ table {
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
-html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-}
-
 /* Sections
      ========================================================================== */
 
@@ -150,17 +70,9 @@ html {
    * Remove the margin in all browsers.
    */
 
-body {
-    margin: 0;
-}
-
 /**
    * Render the `main` element consistently in IE.
    */
-
-main {
-    display: block;
-}
 
 /* Grouping content
      ========================================================================== */
@@ -170,21 +82,10 @@ main {
    * 2. Show the overflow in Edge and IE.
    */
 
-hr {
-    box-sizing: content-box; /* 1 */
-    height: 0; /* 1 */
-    overflow: visible; /* 2 */
-}
-
 /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
    * 2. Correct the odd `em` font sizing in all browsers.
    */
-
-pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-}
 
 /* Text-level semantics
      ========================================================================== */
@@ -193,7 +94,7 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 
-a {
+#artifact a {
     background-color: transparent;
 }
 
@@ -202,7 +103,7 @@ a {
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 
-abbr[title] {
+#artifact abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
     text-decoration: underline dotted; /* 2 */
@@ -212,8 +113,8 @@ abbr[title] {
    * Add the correct font weight in Chrome, Edge, and Safari.
    */
 
-b,
-strong {
+#artifact b,
+#artifact strong {
     font-weight: bolder;
 }
 
@@ -222,9 +123,9 @@ strong {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 
-code,
-kbd,
-samp {
+#artifact code,
+#artifact kbd,
+#artifact samp {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
 }
@@ -233,7 +134,7 @@ samp {
    * Add the correct font size in all browsers.
    */
 
-small {
+#artifact small {
     font-size: 80%;
 }
 
@@ -242,19 +143,19 @@ small {
    * all browsers.
    */
 
-sub,
-sup {
+#artifact sub,
+#artifact sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
 
-sub {
+#artifact sub {
     bottom: -0.25em;
 }
 
-sup {
+#artifact sup {
     top: -0.6em;
 }
 
@@ -265,7 +166,7 @@ sup {
    * Remove the border on images inside links in IE 10.
    */
 
-img {
+#artifact img {
     border-style: none;
 }
 
@@ -277,11 +178,11 @@ img {
    * 2. Remove the margin in Firefox and Safari.
    */
 
-button,
-input,
-optgroup,
-select,
-textarea {
+#artifact button,
+#artifact input,
+#artifact optgroup,
+#artifact select,
+#artifact textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
@@ -293,8 +194,8 @@ textarea {
    * 1. Show the overflow in Edge.
    */
 
-button,
-input {
+#artifact button,
+#artifact input {
     /* 1 */
     overflow: visible;
 }
@@ -304,8 +205,8 @@ input {
    * 1. Remove the inheritance of text transform in Firefox.
    */
 
-button,
-select {
+#artifact button,
+#artifact select {
     /* 1 */
     text-transform: none;
 }
@@ -314,10 +215,10 @@ select {
    * Correct the inability to style clickable types in iOS and Safari.
    */
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+#artifact button,
+#artifact [type='button'],
+#artifact [type='reset'],
+#artifact [type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -325,10 +226,10 @@ button,
    * Remove the inner border and padding in Firefox.
    */
 
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+#artifact button::-moz-focus-inner,
+#artifact [type='button']::-moz-focus-inner,
+#artifact [type='reset']::-moz-focus-inner,
+#artifact [type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -337,10 +238,10 @@ button::-moz-focus-inner,
    * Restore the focus styles unset by the previous rule.
    */
 
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+#artifact button:-moz-focusring,
+#artifact [type='button']:-moz-focusring,
+#artifact [type='reset']:-moz-focusring,
+#artifact [type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -348,7 +249,7 @@ button:-moz-focusring,
    * Correct the padding in Firefox.
    */
 
-fieldset {
+#artifact fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
 
@@ -359,7 +260,7 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 
-legend {
+#artifact legend {
     box-sizing: border-box; /* 1 */
     color: inherit; /* 2 */
     display: table; /* 1 */
@@ -372,7 +273,7 @@ legend {
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
 
-progress {
+#artifact progress {
     vertical-align: baseline;
 }
 
@@ -380,7 +281,7 @@ progress {
    * Remove the default vertical scrollbar in IE 10+.
    */
 
-textarea {
+#artifact textarea {
     overflow: auto;
 }
 
@@ -389,8 +290,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type='checkbox'],
-[type='radio'] {
+#artifact [type='checkbox'],
+#artifact [type='radio'] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -399,8 +300,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+#artifact [type='number']::-webkit-inner-spin-button,
+#artifact [type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -409,7 +310,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type='search'] {
+#artifact [type='search'] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -418,7 +319,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type='search']::-webkit-search-decoration {
+#artifact [type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -427,7 +328,7 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 
-::-webkit-file-upload-button {
+#artifact ::-webkit-file-upload-button {
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
@@ -439,7 +340,7 @@ textarea {
    * Add the correct display in Edge, IE 10+, and Firefox.
    */
 
-details {
+#artifact details {
     display: block;
 }
 
@@ -447,7 +348,7 @@ details {
    * Add the correct display in all browsers.
    */
 
-summary {
+#artifact summary {
     display: list-item;
 }
 
@@ -458,7 +359,7 @@ summary {
    * Add the correct display in IE 10+.
    */
 
-template {
+#artifact template {
     display: none;
 }
 
@@ -466,6 +367,6 @@ template {
    * Add the correct display in IE 10.
    */
 
-[hidden] {
+#artifact [hidden] {
     display: none;
 }

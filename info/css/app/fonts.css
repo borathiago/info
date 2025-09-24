@@ -1,995 +1,942 @@
-/*! 
-fonts 
-Arquivo de configuração de fontes 
-*/
-body {
+#artifact {
     font-size: var(--default-font-size);
     line-height: 1.3141816;
 }
 
-body.font-electrolux {
+#artifact.font-electrolux {
     font-family: var(--default-electrolux-font) !important;
     letter-spacing: 0.017em;
 }
 
-body.font-mademsa {
+#artifact.font-mademsa {
     font-family: var(--default-mademsa-font) !important;
 }
 
-i {
+#artifact i {
     font-style: italic !important;
 }
 
-.font-electrolux-light {
+#artifact .font-electrolux-light {
     font-family: var(--font-electrolux-light);
 }
 
-.font-electrolux-regular {
+#artifact .font-electrolux-regular {
     font-family: var(--default-electrolux-font);
 }
 
-.font-electrolux-bold {
+#artifact .font-electrolux-bold {
     font-family: var(--font-electrolux-bold);
 }
 
-.font-electrolux-semibold {
+#artifact .font-electrolux-semibold {
     font-family: var(--font-electrolux-semibold);
 }
 
-.font-mademsa-light {
+#artifact .font-mademsa-light {
     font-family: var(--font-mademsa-light);
 }
 
-.font-mademsa-regular {
+#artifact .font-mademsa-regular {
     font-family: var(--default-mademsa-font);
 }
 
-.font-mademsa-bold {
+#artifact .font-mademsa-bold {
     font-family: var(--font-mademsa-bold);
 }
 
-.text-uppercase {
+#artifact .text-uppercase {
     text-transform: uppercase;
 }
 
-.text-white {
+#artifact .text-white {
     color: white;
 }
 
-.text-center {
+#artifact .text-center {
     text-align: center;
 }
 
-.text-left {
+#artifact .text-left {
     text-align: left;
 }
 
-.text-right {
+#artifact .text-right {
     text-align: right;
 }
 
-.text-m-center-d-left {
+#artifact .text-m-center-d-left {
     text-align: center;
 }
 
-.text-center-right {
+#artifact .text-center-right {
     text-align: center;
 }
 
-.line-height-1\.125 {
+#artifact .line-height-1\.125 {
     line-height: 1.125 !important;
 }
 
-footer p {
+#artifact footer p {
     font-size: 82.75%;
 }
 
-.h-intro {
+#artifact .h-intro {
     font-size: var(--title-intro-base);
 }
 
-.h-section-bigger {
+#artifact .h-section-bigger {
     font-size: var(--title-section-bigger);
 }
 
-.h-section .m-h-section {
+#artifact .h-section .m-h-section {
     font-size: var(--title-section-base);
 }
 
-.p-title {
+#artifact .p-title {
     font-size: var(--text-intro-base);
 }
 
-.p-text,
-.m-p-text {
+#artifact .p-text,
+#artifact .m-p-text {
     font-size: var(--text-section-base);
 }
 
-/*! 
-360px 
-*/
-@media screen and (min-width: 22.5em) {
-    .h-intro {
+@media screen and (min-width: 22.5em /* 360px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.125);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.25);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.25);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.125);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 0.85);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.525);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.125) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.125) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.125) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 0.85) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 0.85) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 0.85) * 1.5);
     }
 }
 
-/*! 
-375px 
-*/
-@media screen and (min-width: 23.438em) {
-    .h-intro {
+@media screen and (min-width: 23.438em /* 375px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.2);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.325);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.325);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.2);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 0.925);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.675);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.2) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.2) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.2) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 0.925) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 0.925) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 0.925) * 1.5);
     }
 }
 
-/*! 
-414px 
-*/
-@media screen and (min-width: 25.875em) {
-    .h-intro {
+@media screen and (min-width: 25.875em /* 414px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.325);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.45);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.45);
     }
 
-    .h-section-smaller {
+    #artifact .h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.2);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.325);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 1.05);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.05) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.05) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.05) * 1.5);
     }
 }
 
-/*! 
-430px 
-*/
-@media screen and (min-width: 26.875em) {
-    .h-intro {
+@media screen and (min-width: 26.875em /* 430px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.25);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.375);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.375);
     }
 
-    .h-section-smaller {
+    #artifact .h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.125);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.4);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 1.125);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.4) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.4) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.4) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.5);
     }
 }
 
-/*! 
-525px 
-*/
-@media screen and (min-width: 32.813em) {
-    .h-intro {
+@media screen and (min-width: 32.813em /* 525px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.5);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.625);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.625);
     }
 
-    .h-section-smaller {
+    #artifact .h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.425);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.65);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 1.4);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.125);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.65) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.65) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.65) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.4) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.4) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.4) * 1.5);
     }
 }
 
-/*! 
-600px 
-*/
-@media screen and (min-width: 37.5em) {
-    .h-intro {
+@media screen and (min-width: 37.5em /* 600px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.75);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.875);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 1.875);
     }
 
-    .h-section-smaller {
+    #artifact .h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.625);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.85);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 1.6);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.325);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.85) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.85) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.85) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.6) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.6) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.6) * 1.5);
     }
 }
 
-/*! 
-712px 
-*/
-@media screen and (min-width: 44.5em) {
-    .h-intro {
+@media screen and (min-width: 44.5em /* 712px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 2);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 2.125);
     }
 
-    .h-section,
-    .m-h-section {
+    #artifact .h-section,
+    #artifact .m-h-section {
         font-size: calc(var(--title-section-base) * 2.125);
     }
 
-    .h-section-smaller {
+    #artifact .h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.875);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 2.25);
     }
 
-    .p-text,
-    .m-p-text {
+    #artifact .p-text,
+    #artifact .m-p-text {
         font-size: calc(var(--text-section-base) * 2);
     }
 
-    .p-text-smaller {
+    #artifact .p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.675);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 2.25) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 2.25) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 2.25) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 2) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 2) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 2) * 1.5);
     }
 }
 
-/*! 
-768px 
-*/
-@media screen and (min-width: 48em) {
-    .text-m-center-d-left {
+@media screen and (min-width: 48em /* 768px */) {
+    #artifact .text-m-center-d-left {
         text-align: left;
     }
 
-    .text-center-right {
+    #artifact .text-center-right {
         text-align: right;
     }
 
-    .h-intro {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.2);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.375);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 1.375);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.125);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.325);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 1.075);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.075) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.075) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.075) * 1.5);
     }
 }
 
-/*! 
-800px 
-*/
-@media screen and (min-width: 50em) {
-    .h-intro {
+@media screen and (min-width: 50em /* 800px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.125);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.325);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 1.5);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.25);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.325);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 1.125);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 0.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.325) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.125) * 1.5);
     }
 }
 
-/*! 
-980px 
-*/
-@media screen and (min-width: 61.25em) {
-    .h-intro {
+@media screen and (min-width: 61.25em /* 980px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.425);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.65);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 2);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 1.75);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.5);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 1.5);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.125);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.5) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.5) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.5) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.5) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.5) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.5) * 1.5);
     }
 }
 
-/*! 
-1024px 
-*/
-@media screen and (min-width: 64em) {
-    .h-intro {
+@media screen and (min-width: 64em /* 1024px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.425);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 1.75);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 2.325);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 2.075);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.625);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 1.75);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.325);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.625) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.625) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.625) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 1.75) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 1.75) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 1.75) * 1.5);
     }
 }
 
-/*! 
-1200px 
-*/
-@media screen and (min-width: 75em) {
-    .h-intro {
+@media screen and (min-width: 75em /* 1200px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.625);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 2.125);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 2.725);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 2.475);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 1.875);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 2.1);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.75);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 1.875) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 1.875) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 1.875) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 2.1) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 2.1) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 2.1) * 1.5);
     }
 }
 
-/*! 
-1280px 
-*/
-@media screen and (min-width: 80em) {
-    .h-intro {
+@media screen and (min-width: 80em /* 1280px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 1.75);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 2.25);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 3);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 2.5);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 2.125);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 2.255);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.675);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.5);
     }
 }
 
-/*! 
-1372px 
-*/
-@media screen and (min-width: 85.75em) {
-    .h-intro {
+@media screen and (min-width: 85.75em /* 1372px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 2);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 2.5);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 3.125);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 2.875);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 2.125);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 2.255);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 2.125) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 2.255) * 1.5);
     }
 }
 
-/*! 
-1432px 
-*/
-@media screen and (min-width: 89.5em) {
-    .h-intro {
+@media screen and (min-width: 89.5em /* 1432px */) {
+    #artifact .h-intro {
         font-size: calc(var(--title-intro-base) * 2);
     }
 
-    .h-section-bigger {
+    #artifact .h-section-bigger {
         font-size: calc(var(--title-section-bigger) * 2.5);
     }
 
-    .h-section {
+    #artifact .h-section {
         font-size: calc(var(--title-section-base) * 3.125);
     }
 
-    .h-section-smaller,
-    .d-h-section-smaller {
+    #artifact .h-section-smaller,
+    #artifact .d-h-section-smaller {
         font-size: calc(var(--title-section-base) * 2.875);
     }
 
-    .p-title {
+    #artifact .p-title {
         font-size: calc(var(--text-intro-base) * 2.325);
     }
 
-    .p-text {
+    #artifact .p-text {
         font-size: calc(var(--text-section-base) * 2.435);
     }
 
-    .p-text-smaller,
-    .d-p-text-smaller {
+    #artifact .p-text-smaller,
+    #artifact .d-p-text-smaller {
         font-size: calc(var(--text-section-base) * 1.875);
     }
 
-    .p-title-1\.125x {
+    #artifact .p-title-1\.125x {
         font-size: calc((var(--text-intro-base) * 2.325) * 1.125);
     }
 
-    .p-title-1\.25x {
+    #artifact .p-title-1\.25x {
         font-size: calc((var(--text-intro-base) * 2.325) * 1.25);
     }
 
-    .p-title-1\.5x {
+    #artifact .p-title-1\.5x {
         font-size: calc((var(--text-intro-base) * 2.325) * 1.5);
     }
 
-    .p-text-1\.125x {
+    #artifact .p-text-1\.125x {
         font-size: calc((var(--text-section-base) * 2.435) * 1.125);
     }
 
-    .p-text-1\.25x {
+    #artifact .p-text-1\.25x {
         font-size: calc((var(--text-section-base) * 2.435) * 1.25);
     }
 
-    .p-text-1\.5x {
+    #artifact .p-text-1\.5x {
         font-size: calc((var(--text-section-base) * 2.435) * 1.5);
     }
 }
-
-/*! 
-\\\\ fonts 
-*/

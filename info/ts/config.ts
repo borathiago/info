@@ -1,19 +1,14 @@
-import { z } from 'zod'
-import { CarouselLibs } from './domain/types/carousel'
-import { VideoUIConfig } from './domain/types/media'
-import { ModalUIConfig } from './domain/types/modal'
+import { ModalUIConfig } from './application/schemas/modal.schema'
+import { VideoUIConfig } from './application/schemas/media.schema'
+import { CarouselLibrary } from './application/schemas/carousel.schema'
+import { Layout } from '@arizona/config-schemas'
 
-export const envSchema = z.union([z.literal('development'), z.literal('production')])
-export type env = z.infer<typeof envSchema>
-export const env: env = 'production'
-
+export const imgPath = './img'
+export const layout: Layout = 'electrolux'
 export const breakpoint = 768
 export const modules = 'section'
-export const root = 'body'
+export const root = '.main'
 export const app = 'app'
-
-export const scriptIdentifier = 'electrolux-iframe-script'
-export const url = 'https://content.electrolux.com.br/utils/getIframeHeight.js'
 
 export const modalUI: ModalUIConfig = {
     parent: 'box-modals',
@@ -46,7 +41,7 @@ export const videoUI: VideoUIConfig = {
 export const imagesClass = 'electrolux-create-image'
 export const videoClass = 'electrolux-create-video'
 
-export const carouselLib: CarouselLibs = 'Swiper'
+export const carouselLib: CarouselLibrary = 'swiper'
 export const swiperCustomPrevButton = 'electrolux-custom-button-prev'
 export const swiperCustomNextButton = 'electrolux-custom-button-next'
 export const carouselClass = 'swiper'

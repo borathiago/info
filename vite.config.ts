@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
-import legacy from '@vitejs/plugin-legacy'
 
 export default defineConfig({
     base: './',
@@ -8,7 +7,7 @@ export default defineConfig({
     root: './info',
     server: {
         port: 5180,
-        host: true
+        host: true,
     },
     build: {
         cssCodeSplit: false,
@@ -16,30 +15,26 @@ export default defineConfig({
         assetsDir: 'css',
         rollupOptions: {
             output: {
-                entryFileNames: 'js/[name]-electrolux-app.js',
-                chunkFileNames: 'js/[name]-electrolux.js',
+                entryFileNames: 'js/electrolux-app.js',
+                chunkFileNames: 'js/electrolux-app.js',
                 assetFileNames: (assetInfo) => {
                     if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-                        return 'css/electrolux-app[extname]'
+                        return 'css/electrolux-app.css'
                     }
                     return 'css/fonts/[name][extname]'
-                },
+                }
             },
         },
+        modulePreload: false, /* Desabilitar modulepreload */ /* O modulepreload poderia causar problemas em contexto de ShadowDOM */
+        minify: 'terser',
+        target: 'es2020' /* Remover suporte para navegadores antigos */,
+        sourcemap: false,
     },
     plugins: [
-        legacy({
-            targets: ['defaults', 'not IE 11'],
-            additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-        }),
         viteStaticCopy({
             targets: [
                 {
                     src: 'img',
-                    dest: '.',
-                },
-                {
-                    src: 'modules',
                     dest: '.',
                 },
             ],

@@ -1,44 +1,40 @@
-import { App } from './domain/app'
-import { Module } from './domain/module'
-import { AppError } from './errors/app-error'
-import { handler } from './utils/handler'
-import { initModuleEvents } from './services/events/module'
-import { InstanceDataType } from './domain/types/app'
-import { ModuleFetchResponse } from './domain/types/module'
-import { initMedia } from './services/media/media'
-import { storage } from './domain/storage'
-import { logger } from './logger'
-import { app, breakpoint, env, modules, root, scriptIdentifier, url } from './config'
+import { App } from './application/domain/app'
+import { handler } from './application/utils/handler/handler'
+import { initMedia } from './services/media/media.service'
+import { app, breakpoint, layout, root } from './config'
+import { InstanceDataType } from './application/schemas/app.schema'
+import { ModuleResponse } from './application/schemas/module.schema'
+import { ApplicationError } from './application/errors/application.error'
+import { Module } from './application/domain/module'
+import { initModuleEvents } from './services/module/module.service'
 
-export const appInstance = new App({ modules, root, app, breakpoint })
-appInstance.validateDevice()
-appInstance.applyStyles()
-
-appInstance.insertHelperScript(scriptIdentifier, url)
-
-export const response = new Set<ModuleFetchResponse>()
-appInstance.setModules().forEach(async (element) => {
-    const id = element.getAttribute('id')
-    if (!id) {
-        throw new AppError(`O módulo "${element}" não possui "id"`)
+console.log(':: Buscando contêiner ::')
+const getContainer = (): Document | ShadowRoot => {
+    const shadow = document.querySelector('#infographic-shadow-container')?.shadowRoot
+    if (shadow) {
+        console.log(':: Contêiner raiz encontrado ::', shadow)
+        return shadow
     }
-    const path = element.getAttribute('module')
-    if (!path) {
-        throw new AppError(`O módulo "${element}" não possui o atributo "module"`)
-    }
-    const module = new Module(id)
-    const moduleResponse = await module.fetch(path)
-    response.add(moduleResponse)
-})
-
-appInstance.setUpCache('Electrolux', env)
-
-export const instanceLength = appInstance.setModules().size
-export const instanceData: InstanceDataType = {
-    ...appInstance.getInstanceData(),
-    modules: instanceLength,
-    device: appInstance.device,
+    console.log(':: Contêiner raiz encontrado ::', document)
+    return document
 }
+
+export const container = getContainer()
+export const isShadowRoot = container instanceof ShadowRoot
+
+console.log(':: Iniciando aplicação ::')
+export const application = new App({ root, layout, app, breakpoint })
+console.log(':: application ::', application)
+application.validateDevice()
+application.applyStyles()
+
+export const instanceData: InstanceDataType = {
+    ...application.getInstanceData(),
+    device: application.device,
+}
+console.log(':: instanceData ::', instanceData)
+
+export const response = new Set<ModuleResponse>()
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 type Callback = (prop: keyof InstanceDataType, value: any) => void
@@ -56,65 +52,108 @@ export const reactiveInstanceData = new Proxy<InstanceDataType>(instanceData, {
         return true
     },
 })
-const name = 'Instance Data'
-const log = { ...instanceData }
-storage.session(name, log)
+console.log(':: reactiveInstanceData ::', reactiveInstanceData)
 
-let appInitialized = false
-let modulesProcessed = false
-const setUpListeners = async () => {
-    if (appInitialized) return
-    appInitialized = true
-    await new Promise<void>((resolve) => {
-        if (document.readyState !== 'loading') {
-            resolve()
-        } else {
-            document.addEventListener('DOMContentLoaded', () => resolve())
+const processModules = async (): Promise<ModuleResponse[]> => {
+    console.log(':: Iniciando processamento dos módulos ::')
+    const modules = application.setModules()
+    const modulePromises = Array.from(modules).map(async (element) => {
+        const id = element.getAttribute('id')
+        if (!id) {
+            throw new ApplicationError(`O módulo ${element} não possui id.`)
         }
+        console.log(':: Processando módulo ::', id)
+        const module = new Module(id)
+        const moduleResponse = await module.load()
+        response.add(moduleResponse)
+        return moduleResponse
     })
-    await new Promise<void>((resolve) => {
-        if (document.readyState !== 'complete') {
-            resolve()
-        } else {
-            window.addEventListener('load', () => resolve())
-        }
-    })
-    const observer = new MutationObserver(async () => {
-        if (modulesProcessed) {
-            return
-        }
-        const contents = handler.listItems('[loaded]', 'all')
-        const areAllModulesProcessed = contents.length === instanceLength && contents.length === response.size + 1
-        if (areAllModulesProcessed) {
-            modulesProcessed = true
-            await Promise.all(
-                contents.map(async (content) => {
-                    await initMedia(content)
-                    initModuleEvents(content)
-                    if (env === 'development') {
-                        logger.info(':: Mídia & Eventos ::', content)
-                    }
-                }),
-            )
-            await new Promise((resolve) => setTimeout(resolve, 950)).then(() => {
-                observer.disconnect()
-                void document.body.offsetHeight
-                appInstance.toggleLayoutDisplay('opacity-0')
-                if (env === 'development') {
-                    logger.info('Observador desconectado.')
-                }
-            })
-        }
-    })
-    observer.observe(document.body, { childList: true, subtree: true })
-    appInstance.observeSizeChanges((updatedDevice) => {
-        reactiveInstanceData.device = updatedDevice
-        const name = 'Instance Data'
-        const log = { ...reactiveInstanceData }
-        storage.session(name, log)
-        if (env === 'development') {
-            logger.info(':: Dados reativos da instância de App ::', log)
-        }
-    })
+
+    const results = await Promise.all(modulePromises)
+    console.log(':: Todos os módulos processados ::', response)
+    return results
 }
-setUpListeners()
+
+const processLoadedMedia = async (): Promise<void> => {
+    const loadedElements = handler.listItems('[loaded]', 'all')
+    console.log(':: Elementos [loaded] encontrados ::', loadedElements)
+    if (loadedElements.length > 0) {
+        console.log(':: Inicializando mídia dos elementos [loaded]')
+        await Promise.all(
+            loadedElements.map(async (content) => {
+                await initMedia(content)
+                initModuleEvents(content)
+            }),
+        )
+    }
+}
+
+const initializeApp = async (): Promise<void> => {
+    try {
+        console.log(':: Modo de injeção detectado. Iniciando sem aguardar eventos DOM ::')
+        await processModules() /* Processar módulos */
+        console.log(':: Módulos processados com sucesso ::')
+        await new Promise((resolve) => setTimeout(resolve, 100))
+        await processLoadedMedia() /* Aguardar processamento de mídias */
+        await new Promise((resolve) => setTimeout(resolve, 300))
+        /* Forçar reflow */
+        if (container instanceof ShadowRoot) {
+            const host = (container as any).host
+            if (host) void host.offsetHeight
+        } else {
+            void document.body.offsetHeight
+        }
+        application.toggleLayoutDisplay('opacity-0')
+        /* Configurar observador de mudanças de dispositivo */
+        application.observeSizeChanges((updatedDevice) => {
+            reactiveInstanceData.device = updatedDevice
+        })
+        console.log(':: Aplicação inicializada ::')
+    } catch (error) {
+        console.error(':: Erro na inicialização da aplicação ::', error)
+        try {
+            console.log(':: Tentando inicialização de fallback ::')
+            await new Promise((resolve) => setTimeout(resolve, 300))
+            application.toggleLayoutDisplay('opacity-0')
+        } catch (error) {
+            console.error(':: Falha no fallback ::', error)
+        }
+    }
+}
+
+const isDocumenteReadyStateComplete = document.readyState === 'complete'
+const startApp = (): void => {
+    /* Em contexto de injeção, document.readyState provavelmente já será 'complete' */
+    if (isDocumenteReadyStateComplete) {
+        console.log(':: Contexto de injeção detectado ::')
+        requestAnimationFrame(() => {
+            initializeApp()
+        })
+    } else if (document.readyState === 'interactive') {
+        /* DOM carregando. Recursos ainda indisponíveis */
+        console.log(':: DOM interativo. Esperando por load ::')
+        window.addEventListener('load', () => {
+            requestAnimationFrame(() => {
+                initializeApp()
+            })
+        })
+    } else {
+        /* DOM ainda carregando */
+        console.log(':: DOM carregando. Esperando por DOMContentLoaded')
+        document.addEventListener('DOMContentLoaded', () => {
+            if (isDocumenteReadyStateComplete) {
+                requestAnimationFrame(() => {
+                    initializeApp()
+                })
+            } else {
+                window.addEventListener('load', () => {
+                    requestAnimationFrame(() => {
+                        initializeApp()
+                    })
+                })
+            }
+        })
+    }
+}
+
+startApp()

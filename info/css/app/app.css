@@ -1,11 +1,4 @@
-/*! 
-    app
-    Arquivo primário com estilos básicos e gerais da aplicação
-    Classes para uso direto no HTML
-    Não deve ser modificado
-*/
-
-:root {
+#artifact {
     --color-gray-100: rgba(223, 231, 234, 1);
     --color-gray-200: rgba(173, 185, 195, 1);
     --color-gray-300: rgba(123, 138, 156, 1);
@@ -39,29 +32,24 @@
     --font-mademsa-bold-oblique: 'Proxima Nova Bold Italic';
 }
 
-* {
+#artifact * {
     box-sizing: border-box;
 }
 
-html {
-    max-width: var(--container);
-    margin: 0 auto;
-}
-
-body {
+#artifact {
     max-width: var(--container);
     overflow-x: hidden;
     margin: 0 auto;
 }
 
-img,
-video {
+#artifact img,
+#artifact video {
     min-width: 100% !important;
     max-width: 100% !important;
     display: block !important;
 }
 
-section {
+#artifact section {
     width: 100%;
     min-width: 100% !important;
     max-width: 100% !important;
@@ -72,7 +60,7 @@ section {
     object-fit: cover;
 }
 
-.electrolux-create-image {
+#artifact .electrolux-create-image {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -81,723 +69,723 @@ section {
     transition: all ease-in-out 925ms;
 }
 
-sup {
+#artifact sup {
     font-size: 52%;
 }
 
-.flex {
+#artifact .flex {
     display: flex;
 }
 
-.m-display-flex {
+#artifact .m-display-flex {
     display: flex;
 }
 
-.direction-row,
-.m-direction-row {
+#artifact .direction-row,
+#artifact .m-direction-row {
     flex-direction: row;
 }
 
-.direction-column,
-.m-direction-column {
+#artifact .direction-column,
+#artifact .m-direction-column {
     flex-direction: column;
 }
 
-.direction-row-reverse,
-.m-direction-row-reverse {
+#artifact .direction-row-reverse,
+#artifact .m-direction-row-reverse {
     flex-direction: row-reverse;
 }
 
-.direction-column-reverse,
-.m-direction-column-reverse {
+#artifact .direction-column-reverse,
+#artifact .m-direction-column-reverse {
     flex-direction: column-reverse;
 }
 
-.justify-center,
-.m-justify-center {
+#artifact .justify-center,
+#artifact .m-justify-center {
     justify-content: center;
 }
 
-.justify-between,
-.m-justify-between {
+#artifact .justify-between,
+#artifact .m-justify-between {
     justify-content: space-between;
 }
 
-.justify-start,
-.m-justify-start {
+#artifact .justify-start,
+#artifact .m-justify-start {
     justify-content: flex-start;
 }
 
-.justify-end,
-.m-justify-end {
+#artifact .justify-end,
+#artifact .m-justify-end {
     justify-content: flex-end;
 }
 
-.justify-around,
-.m-justify-around {
+#artifact .justify-around,
+#artifact .m-justify-around {
     justify-content: space-around;
 }
 
-.justify-evenly,
-.m-justify-evenly {
+#artifact .justify-evenly,
+#artifact .m-justify-evenly {
     justify-content: space-evenly;
 }
 
-.align-center,
-.m-align-center {
+#artifact .align-center,
+#artifact .m-align-center {
     align-items: center;
 }
 
-.align-start,
-.m-align-start {
+#artifact .align-start,
+#artifact .m-align-start {
     align-items: flex-start;
 }
 
-.align-stretch,
-.m-align-stretch {
+#artifact .align-stretch,
+#artifact .m-align-stretch {
     align-items: flex-stretch;
 }
 
-.align-end,
-.m-align-end {
+#artifact .align-end,
+#artifact .m-align-end {
     align-items: flex-end;
 }
 
-.grid {
+#artifact .grid {
     display: grid;
 }
 
-.d-display-grid {
+#artifact .d-display-grid {
     display: none;
 }
 
-.grid-item-normal {
+#artifact .grid-item-normal {
     order: 1;
 }
 
-.grid-item-reverse {
+#artifact .grid-item-reverse {
     order: -1;
 }
 
-.grid-m-1-d-2,
-.grid-m-1-d-3,
-.grid-m-1-d-4,
-.grid-m-1-d-5 {
+#artifact .grid-m-1-d-2,
+#artifact .grid-m-1-d-3,
+#artifact .grid-m-1-d-4,
+#artifact .grid-m-1-d-5 {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
-.grid-2 {
+#artifact .grid-2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
-.grid-3 {
+#artifact .grid-3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
-.grid-justify-strech {
+#artifact .grid-justify-strech {
     justify-self: stretch;
 }
 
-.d-display-block,
-.d-display-flex {
+#artifact .d-display-block,
+#artifact .d-display-flex {
     display: none;
 }
 
-.m-display-block {
+#artifact .m-display-block {
     display: block;
 }
 
-.d-display-inline {
+#artifact .d-display-inline {
     display: none;
 }
 
-.display-inline,
-.m-display-inline {
+#artifact .display-inline,
+#artifact .m-display-inline {
     display: inline;
 }
 
-.m-display-inline-block {
+#artifact .m-display-inline-block {
     display: inline-block;
 }
 
-.cursor-pointer {
+#artifact .cursor-pointer {
     cursor: pointer;
 }
 
-.pointer-events-none {
+#artifact .pointer-events-none {
     pointer-events: none !important;
 }
 
-.transition-all {
+#artifact .transition-all {
     transition: all;
     transition-duration: 400ms;
 }
 
-.transition-opacity {
+#artifact .transition-opacity {
     transition: opacity;
     transition-duration: 200ms;
 }
 
-.scale-100 {
+#artifact .scale-100 {
     transform: scale(1, 1);
 }
 
-.scale-98 {
+#artifact .scale-98 {
     transform: scale(0.98, 0.98);
 }
 
-.scale-90 {
+#artifact .scale-90 {
     transform: scale(0.9, 0.9);
 }
 
-.scale-50 {
+#artifact .scale-50 {
     transform: scale(0.5, 0.5);
 }
 
-.scale-0 {
+#artifact .scale-0 {
     transform: scale(0, 0);
 }
 
-.opacity-0 {
+#artifact .opacity-0 {
     opacity: 0;
 }
 
-.opacity-25 {
+#artifact .opacity-25 {
     opacity: 0.25;
 }
 
-.opacity-50 {
+#artifact .opacity-50 {
     opacity: 0.5;
 }
 
-.opacity-100 {
+#artifact .opacity-100 {
     opacity: 1;
 }
 
-.-absolute-z {
+#artifact .-absolute-z {
     position: absolute;
     z-index: -1 !important;
 }
 
-.absolute,
-.m-absolute {
+#artifact .absolute,
+#artifact .m-absolute {
     position: absolute;
     z-index: 20;
 }
 
-.fixed {
+#artifact .fixed {
     position: fixed;
     z-index: 999999 !important;
 }
 
-.relative,
-.m-relative {
+#artifact .relative,
+#artifact .m-relative {
     position: relative;
 }
 
-.-z-1 {
+#artifact .-z-1 {
     z-index: -1 !important;
 }
 
-.z-1 {
+#artifact .z-1 {
     z-index: 1;
 }
 
-.z-20 {
+#artifact .z-20 {
     z-index: 20 !important;
 }
 
-.z-50 {
+#artifact .z-50 {
     z-index: 50 !important;
 }
 
-.z-100 {
+#artifact .z-100 {
     z-index: 100 !important;
 }
 
-.isolate {
+#artifact .isolate {
     isolation: isolate;
 }
 
-.hidden {
+#artifact .hidden {
     opacity: 0;
     pointer-events: none;
 }
 
-.op-0 {
+#artifact .op-0 {
     opacity: 0 !important;
 }
 
-.op-\.5 {
+#artifact .op-\.5 {
     opacity: 0.5 !important;
 }
 
-.op-\.25 {
+#artifact .op-\.25 {
     opacity: 0.25 !important;
 }
 
-.w-full,
-.m-w-full {
+#artifact .w-full,
+#artifact .m-w-full {
     width: 100%;
 }
 
-.m-w-50\% {
+#artifact .m-w-50\% {
     width: 50%;
 }
 
-.w-auto,
-.m-w-auto {
+#artifact .w-auto,
+#artifact .m-w-auto {
     width: auto;
 }
 
-.h-full,
-.m-h-full {
+#artifact .h-full,
+#artifact .m-h-full {
     height: 100% !important;
 }
 
-.m-h-auto {
+#artifact .m-h-auto {
     height: auto;
 }
 
-.h-50\%,
-.m-h-50\% {
+#artifact .h-50\%,
+#artifact .m-h-50\% {
     height: 50% !important;
 }
 
-.bg-gray,
-.m-bg-gray {
+#artifact .bg-gray,
+#artifact .m-bg-gray {
     background-color: var(--color-gray);
 }
 
-.bg-gray-100,
-.m-bg-gray-100 {
+#artifact .bg-gray-100,
+#artifact .m-bg-gray-100 {
     background-color: var(--color-gray-100);
 }
 
-.bg-gray-200,
-.m-bg-gray-200 {
+#artifact .bg-gray-200,
+#artifact .m-bg-gray-200 {
     background-color: var(--color-gray-200);
 }
 
-.bg-gray-300,
-.m-bg-gray-300 {
+#artifact .bg-gray-300,
+#artifact .m-bg-gray-300 {
     background-color: var(--color-gray-300);
 }
 
-.bg-gray-400,
-.m-bg-gray-400 {
+#artifact .bg-gray-400,
+#artifact .m-bg-gray-400 {
     background-color: var(--color-gray-400);
 }
 
-.bg-blue,
-.m-bg-blue {
+#artifact .bg-blue,
+#artifact .m-bg-blue {
     background-color: var(--color-blue);
 }
 
-.bg-white,
-.m-bg-white {
+#artifact .bg-white,
+#artifact .m-bg-white {
     background-color: white;
 }
 
-.bg-white-80,
-.m-bg-white-80 {
+#artifact .bg-white-80,
+#artifact .m-bg-white-80 {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.bg-transparent,
-.m-bg-transparent {
+#artifact .bg-transparent,
+#artifact .m-bg-transparent {
     background-color: transparent !important;
 }
 
-.bg-yellow,
-.m-bg-yellow {
+#artifact .bg-yellow,
+#artifact .m-bg-yellow {
     background-color: var(--color-yellow);
 }
 
-.bg-green,
-.m-bg-green {
+#artifact .bg-green,
+#artifact .m-bg-green {
     background-color: var(--color-green);
 }
 
-.bg-orange,
-.m-bg-orange {
+#artifact .bg-orange,
+#artifact .m-bg-orange {
     background-color: var(--color-orange);
 }
 
-.bg-purple,
-.m-bg-purple {
+#artifact .bg-purple,
+#artifact .m-bg-purple {
     background-color: var(--color-purple);
 }
 
-.m-text-gray,
-.text-gray {
+#artifact .m-text-gray,
+#artifact .text-gray {
     color: var(--color-gray);
 }
 
-.m-text-gray-100,
-.text-gray-100 {
+#artifact .m-text-gray-100,
+#artifact .text-gray-100 {
     color: var(--color-gray-100);
 }
 
-.m-text-gray-200,
-.text-gray-200 {
+#artifact .m-text-gray-200,
+#artifact .text-gray-200 {
     color: var(--color-gray-200);
 }
 
-.m-text-gray-300,
-.text-gray-300 {
+#artifact .m-text-gray-300,
+#artifact .text-gray-300 {
     color: var(--color-gray-300);
 }
 
-.m-text-gray-400,
-.text-gray-400 {
+#artifact .m-text-gray-400,
+#artifact .text-gray-400 {
     color: var(--color-gray-400);
 }
 
-.m-text-blue,
-.text-blue {
+#artifact .m-text-blue,
+#artifact .text-blue {
     color: var(--color-blue);
 }
 
-.m-text-white,
-.text-white {
+#artifact .m-text-white,
+#artifact .text-white {
     color: white;
 }
 
-.text-yellow,
-.m-text-yellow {
+#artifact .text-yellow,
+#artifact .m-text-yellow {
     color: var(--color-yellow);
 }
 
-.text-green,
-.m-text-green {
+#artifact .text-green,
+#artifact .m-text-green {
     color: var(--color-green);
 }
 
-.text-orange,
-.m-text-orange {
+#artifact .text-orange,
+#artifact .m-text-orange {
     color: var(--color-orange);
 }
 
-.text-purple,
-.m-text-purple {
+#artifact .text-purple,
+#artifact .m-text-purple {
     color: var(--color-purple);
 }
 
-.m-relative,
-.-m-relative-z {
+#artifact .m-relative,
+#artifact .-m-relative-z {
     position: relative;
 }
 
-.m-absolute-d-relative {
+#artifact .m-absolute-d-relative {
     position: absolute;
 }
 
-.right-0 {
+#artifact .right-0 {
     right: 0;
 }
 
-.left-0 {
+#artifact .left-0 {
     left: 0;
 }
 
-.top-0 {
+#artifact .top-0 {
     top: 0;
 }
 
-.bottom-0 {
+#artifact .bottom-0 {
     bottom: 0;
 }
 
-.top-0-right-0 {
+#artifact .top-0-right-0 {
     top: 0;
     right: 0;
 }
 
-.bottom-0-right-0 {
+#artifact .bottom-0-right-0 {
     bottom: 0;
     right: 0;
 }
 
-.top-0-left-0 {
+#artifact .top-0-left-0 {
     top: 0;
     left: 0;
 }
 
-.bottom-0-left-0 {
+#artifact .bottom-0-left-0 {
     bottom: 0;
     left: 0;
 }
 
-.m-top-0 {
+#artifact .m-top-0 {
     top: 0;
 }
 
-.m-bottom-0 {
+#artifact .m-bottom-0 {
     bottom: 0;
 }
 
-.opverflow-hidden {
+#artifact .opverflow-hidden {
     overflow: hidden;
 }
 
-.svg {
+#artifact .svg {
     width: 100% !important;
     height: auto !important;
 }
 
-.inline-block {
+#artifact .inline-block {
     display: inline-block;
 }
 
-.padding-full-0\.25em {
+#artifact .padding-full-0\.25em {
     padding: 0.25em;
 }
 
-.padding-full-0\.5em {
+#artifact .padding-full-0\.5em {
     padding: 0.5em;
 }
 
-.padding-full-1em,
-.m-padding-full-1em {
+#artifact .padding-full-1em,
+#artifact .m-padding-full-1em {
     padding: 1em;
 }
 
-.padding-full-2em,
-.m-padding-full-2em {
+#artifact .padding-full-2em,
+#artifact .m-padding-full-2em {
     padding: 2em;
 }
 
-.padding-full-3em,
-.m-padding-full-3em {
+#artifact .padding-full-3em,
+#artifact .m-padding-full-3em {
     padding: 3em;
 }
 
-.padding-1em-3em,
-.m-padding-1em-3em {
+#artifact .padding-1em-3em,
+#artifact .m-padding-1em-3em {
     padding: 1em 3em;
 }
 
-.padding-1\.5em-0 {
+#artifact .padding-1\.5em-0 {
     padding: 1.5em 0;
 }
 
-.padding-2em-0 {
+#artifact .padding-2em-0 {
     padding: 2em 0;
 }
 
-.padding-3em-0 {
+#artifact .padding-3em-0 {
     padding: 3em 0;
 }
 
-.padding-full-2\.25em {
+#artifact .padding-full-2\.25em {
     padding: 2.25em;
 }
 
-.padding-full-4em {
+#artifact .padding-full-4em {
     padding: 4em;
 }
 
-.padding-top-0\.25em {
+#artifact .padding-top-0\.25em {
     padding-top: 0.25em;
 }
 
-.padding-top-0\.5em,
-.m-padding-top-0\.5em {
+#artifact .padding-top-0\.5em,
+#artifact .m-padding-top-0\.5em {
     padding-top: 0.5em;
 }
 
-.padding-top-1em,
-.m-padding-top-1em {
+#artifact .padding-top-1em,
+#artifact .m-padding-top-1em {
     padding-top: 1em;
 }
 
-.padding-top-1\.5em {
+#artifact .padding-top-1\.5em {
     padding-top: 1.5em;
 }
 
-.padding-top-2em,
-.m-padding-top-2em {
+#artifact .padding-top-2em,
+#artifact .m-padding-top-2em {
     padding-top: 2em;
 }
 
-.padding-bottom-0\.5em {
+#artifact .padding-bottom-0\.5em {
     padding-bottom: 0.5em;
 }
 
-.padding-bottom-1em {
+#artifact .padding-bottom-1em {
     padding-bottom: 1em;
 }
 
-.padding-bottom-1\.5em {
+#artifact .padding-bottom-1\.5em {
     padding-bottom: 1.5em;
 }
 
-.padding-bottom-2em {
+#artifact .padding-bottom-2em {
     padding-bottom: 2em;
 }
 
-.padding-0\.5em-1em {
+#artifact .padding-0\.5em-1em {
     padding: 0.5em 1em;
 }
 
-.padding-1em-2em {
+#artifact .padding-1em-2em {
     padding: 1em 2em;
 }
 
-.padding-top-2em {
+#artifact .padding-top-2em {
     padding-top: 2em;
 }
 
-.padding-bottom-0\.75em {
+#artifact .padding-bottom-0\.75em {
     padding-bottom: 0.75em;
 }
 
-.padding-bottom-1em {
+#artifact .padding-bottom-1em {
     padding-bottom: 1em;
 }
 
-.padding-bottom-2em {
+#artifact .padding-bottom-2em {
     padding-bottom: 2em;
 }
 
-.padding-bottom-3em {
+#artifact .padding-bottom-3em {
     padding-bottom: 3em;
 }
 
-.padding-bottom-4em {
+#artifact .padding-bottom-4em {
     padding-bottom: 4em;
 }
 
-.m-padding-2em-0,
-.padding-2em-0 {
+#artifact .m-padding-2em-0,
+#artifact .padding-2em-0 {
     padding: 2em 0;
 }
 
-.m-padding-4em-0,
-.padding-4em-0 {
+#artifact .m-padding-4em-0,
+#artifact .padding-4em-0 {
     padding: 4em 0;
 }
 
-.m-padding-8em-0,
-.padding-8em-0 {
+#artifact .m-padding-8em-0,
+#artifact .padding-8em-0 {
     padding: 8em 0;
 }
 
-.m-padding-9em-0,
-.padding-9em-0 {
+#artifact .m-padding-9em-0,
+#artifact .padding-9em-0 {
     padding: 9em 0;
 }
 
-.m-padding-12em-0,
-.padding-12em-0 {
+#artifact .m-padding-12em-0,
+#artifact .padding-12em-0 {
     padding: 12em 0;
 }
 
-.padding-2\.25em-0 {
+#artifact .padding-2\.25em-0 {
     padding: 2.25em 0;
 }
 
-.margin-bottom-0\.5em {
+#artifact .margin-bottom-0\.5em {
     margin-bottom: 0.5em;
 }
 
-.margin-bottom-1em {
+#artifact .margin-bottom-1em {
     margin-bottom: 1em;
 }
 
-.margin-bottom-2em {
+#artifact .margin-bottom-2em {
     margin-bottom: 2em;
 }
 
-.margin-bottom-4em {
+#artifact .margin-bottom-4em {
     margin-bottom: 4em;
 }
 
-.margin-0\.5em-0 {
+#artifact .margin-0\.5em-0 {
     margin: 0.5em 0;
 }
 
-.margin-0\.75em-0 {
+#artifact .margin-0\.75em-0 {
     margin: 0.75em 0;
 }
 
-.margin-1em-0 {
+#artifact .margin-1em-0 {
     margin: 1em 0;
 }
 
-.margin-2em-0 {
+#artifact .margin-2em-0 {
     margin: 2em 0;
 }
 
-.margin-top-1em,
-.m-margin-top-1em {
+#artifact .margin-top-1em,
+#artifact .m-margin-top-1em {
     margin-top: 1em;
 }
 
-.m-margin-top-0\.5em,
-.margin-top-0\.5em {
+#artifact .m-margin-top-0\.5em,
+#artifact .margin-top-0\.5em {
     margin-top: 0.5em;
 }
 
-.m-margin-top-0\.75em,
-.margin-top-0\.75em {
+#artifact .m-margin-top-0\.75em,
+#artifact .margin-top-0\.75em {
     margin-top: 0.75em;
 }
 
-.margin-top-2em {
+#artifact .margin-top-2em {
     margin-top: 2em;
 }
 
-.margin-top-4em,
-.m-margin-top-4em {
+#artifact .margin-top-4em,
+#artifact .m-margin-top-4em {
     margin-top: 4em;
 }
 
-.margin-top-8em {
+#artifact .margin-top-8em {
     margin-top: 8em;
 }
 
-.margin-0\.5em {
+#artifact .margin-0\.5em {
     margin: 0 0.5em;
 }
 
-.margin-2em {
+#artifact .margin-2em {
     margin: 0 2em;
 }
 
-a.no-decoration {
+#artifact a.no-decoration {
     text-decoration: none !important;
 }
 
-a.d-disabled {
+#artifact a.d-disabled {
     pointer-events: all;
 }
 
-.bullet {
+#artifact .bullet {
     display: flex;
     margin-left: 0.75em;
     align-items: center;
 }
 
-.bullet.bullet-center {
+#artifact .bullet.bullet-center {
     justify-content: center;
 }
 
-.bullet.bullet-start {
+#artifact .bullet.bullet-start {
     justify-content: start;
 }
 
-.bullet::after {
+#artifact .bullet::after {
     content: '';
     background: white;
     width: 0.25em;
@@ -807,391 +795,384 @@ a.d-disabled {
     left: -0.75em;
 }
 
-.pointer-events-none > img {
+#artifact .pointer-events-none > img {
     pointer-events: none;
 }
 
-/*! 
-    768px 
-*/
-@media screen and (min-width: 48em) {
-    .d-display-block {
+@media screen and (min-width: 48em /* 768px */) {
+    #artifact .d-display-block {
         display: block !important;
     }
 
-    .m-display-flex {
+    #artifact .m-display-flex {
         display: none !important;
     }
 
-    .d-display-flex {
+    #artifact .d-display-flex {
         display: flex !important;
     }
 
-    .d-display-grid {
+    #artifact .d-display-grid {
         display: grid !important;
     }
 
-    .d-display-inline {
+    #artifact .d-display-inline {
         display: inline !important;
     }
 
-    .m-display-block,
-    .m-display-inline-block,
-    .m-display-inline {
+    #artifact .m-display-block,
+    #artifact .m-display-inline-block,
+    #artifact .m-display-inline {
         display: none !important;
     }
 
-    .d-direction-row {
+    #artifact .d-direction-row {
         flex-direction: row !important;
     }
 
-    .d-direction-column {
+    #artifact .d-direction-column {
         flex-direction: column !important;
     }
 
-    .d-direction-row-reverse {
+    #artifact .d-direction-row-reverse {
         flex-direction: row-reverse !important;
     }
 
-    .d-direction-column-reverse {
+    #artifact .d-direction-column-reverse {
         flex-direction: column-reverse !important;
     }
 
-    .d-justify-center {
+    #artifact .d-justify-center {
         justify-content: center !important;
     }
 
-    .d-justify-between {
+    #artifact .d-justify-between {
         justify-content: space-between !important;
     }
 
-    .d-justify-start {
+    #artifact .d-justify-start {
         justify-content: flex-start !important;
     }
 
-    .d-justify-end {
+    #artifact .d-justify-end {
         justify-content: flex-end !important;
     }
 
-    .d-justify-around {
+    #artifact .d-justify-around {
         justify-content: space-around !important;
     }
 
-    .d-justify-evenly {
+    #artifact .d-justify-evenly {
         justify-content: space-evenly !important;
     }
 
-    .d-align-center {
+    #artifact .d-align-center {
         align-items: center !important;
     }
 
-    .d-align-start {
+    #artifact .d-align-start {
         align-items: flex-start !important;
     }
 
-    .d-align-end {
+    #artifact .d-align-end {
         align-items: flex-end !important;
     }
 
-    .d-align-stretch {
+    #artifact .d-align-stretch {
         align-items: stretch !important;
     }
 
-    .grid-2 {
+    #artifact .grid-2 {
         grid-template-columns: 1fr 1fr;
     }
 
-    .d-grid-item-reverse {
+    #artifact .d-grid-item-reverse {
         order: -1;
     }
 
-    .grid-m-1-d-2 {
+    #artifact .grid-m-1-d-2 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .grid-m-1-d-3 {
+    #artifact .grid-m-1-d-3 {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .grid-m-1-d-4 {
+    #artifact .grid-m-1-d-4 {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .grid-m-1-d-5 {
+    #artifact .grid-m-1-d-5 {
         grid-template-columns: repeat(5, 1fr);
     }
 
-    .d-relative {
+    #artifact .d-relative {
         position: relative !important;
     }
 
-    .d-absolute {
+    #artifact .d-absolute {
         position: absolute !important;
     }
 
-    .d-right-0 {
+    #artifact .d-right-0 {
         right: 0;
     }
 
-    .d-left-0 {
+    #artifact .d-left-0 {
         left: 0;
     }
 
-    .d-top-0 {
+    #artifact .d-top-0 {
         top: 0;
     }
 
-    .d-bottom-0 {
+    #artifact .d-bottom-0 {
         bottom: 0;
     }
 
-    .d-top-0-right-0 {
+    #artifact .d-top-0-right-0 {
         top: 0;
         right: 0;
     }
 
-    .d-top-0-left-0 {
+    #artifact .d-top-0-left-0 {
         top: 0;
         left: 0;
     }
 
-    .d-text-blue {
+    #artifact .d-text-blue {
         color: var(--color-blue);
     }
 
-    .d-text-white {
+    #artifact .d-text-white {
         color: white;
     }
 
-    .m-bottom {
+    #artifact .m-bottom {
         bottom: auto !important;
     }
 
-    .m-top {
+    #artifact .m-top {
         top: auto !important;
     }
 
-    .d-h-full {
+    #artifact .d-h-full {
         height: 100% !important;
     }
 
-    .d-h-50\% {
+    #artifact .d-h-50\% {
         height: 50% !important;
     }
 
-    .d-w-full {
+    #artifact .d-w-full {
         width: 100% !important;
     }
 
-    .d-w-50\% {
+    #artifact .d-w-50\% {
         width: 50% !important;
     }
 
-    .d-w-auto {
+    #artifact .d-w-auto {
         width: auto !important;
     }
 
-    .d-w-auto-t-none {
+    #artifact .d-w-auto-t-none {
         width: auto !important;
         max-width: auto !important;
         transform: translateX(0) !important;
     }
 
-    a.d-disabled {
+    #artifact a.d-disabled {
         pointer-events: none;
     }
 
-    .m-padding-top-0\.5em {
+    #artifact .m-padding-top-0\.5em {
         padding-top: 0;
     }
 
-    .m-padding-2em-0,
-    .m-padding-4em-0,
-    .m-padding-8em-0,
-    .m-padding-9em-0,
-    .m-padding-12em-0 {
+    #artifact .m-padding-2em-0,
+    #artifact .m-padding-4em-0,
+    #artifact .m-padding-8em-0,
+    #artifact .m-padding-9em-0,
+    #artifact .m-padding-12em-0 {
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    .d-padding-top-0\.75em {
+    #artifact .d-padding-top-0\.75em {
         padding-top: 0.75em;
     }
 
-    .d-padding-top-1em {
+    #artifact .d-padding-top-1em {
         padding-top: 1em;
     }
 
-    .d-margin-1em {
+    #artifact .d-margin-1em {
         margin: 0 1em !important;
     }
 
-    .m-margin-top-1em,
-    .m-margin-top-0\.5em {
+    #artifact .m-margin-top-1em,
+    #artifact .m-margin-top-0\.5em {
         margin-top: 0;
     }
 
-    .d-margin-top-0\.5em {
+    #artifact .d-margin-top-0\.5em {
         margin: 0.5em 0 0 !important;
     }
 
-    .m-padding-full-2em,
-    .m-padding-full-3em,
-    .m-padding-1em-3em {
+    #artifact .m-padding-full-2em,
+    #artifact .m-padding-full-3em,
+    #artifact .m-padding-1em-3em {
         padding: 0;
     }
 
-    .m-margin-top-4em,
-    .m-margin-top-8em {
+    #artifact .m-margin-top-4em,
+    #artifact .m-margin-top-8em {
         margin-top: 0;
     }
 
-    .d-margin-top-4em {
+    #artifact .d-margin-top-4em {
         margin-top: 4em !important;
     }
 
-    .d-margin-top-8em {
+    #artifact .d-margin-top-8em {
         margin-top: 8em !important;
     }
 
-    .d-padding-bottom-1em {
+    #artifact .d-padding-bottom-1em {
         padding-bottom: 1em;
     }
 
-    .d-padding-bottom-2em {
+    #artifact .d-padding-bottom-2em {
         padding-bottom: 2em;
     }
 
-    .d-padding-bottom-3em {
+    #artifact .d-padding-bottom-3em {
         padding-bottom: 3em;
     }
 
-    .d-padding-bottom-4em {
+    #artifact .d-padding-bottom-4em {
         padding-bottom: 4em;
     }
 
-    .d-padding-2\.25em-0 {
+    #artifact .d-padding-2\.25em-0 {
         padding: 2.25em 0;
     }
 
-    .d-margin-bottom-0\.5em {
+    #artifact .d-margin-bottom-0\.5em {
         margin-bottom: 0.5em;
     }
 
-    .d-margin-bottom-1em {
+    #artifact .d-margin-bottom-1em {
         margin-bottom: 1em;
     }
 
-    .d-margin-bottom-2em {
+    #artifact .d-margin-bottom-2em {
         margin-bottom: 2em;
     }
 
-    .d-margin-bottom-4em {
+    #artifact .d-margin-bottom-4em {
         margin-bottom: 4em;
     }
 
-    .d-margin-0\.5em-0 {
+    #artifact .d-margin-0\.5em-0 {
         margin: 0.5em 0;
     }
 
-    .d-margin-0\.75em-0 {
+    #artifact .d-margin-0\.75em-0 {
         margin: 0.75em 0;
     }
 
-    .d-margin-1em-0 {
+    #artifact .d-margin-1em-0 {
         margin: 1em 0;
     }
 
-    .d-margin-2em-0 {
+    #artifact .d-margin-2em-0 {
         margin: 2em 0;
     }
 
-    .d-margin-top-1em {
+    #artifact .d-margin-top-1em {
         margin-top: 1em;
     }
 
-    .d-margin-top-0\.5em {
+    #artifact .d-margin-top-0\.5em {
         margin-top: 0.5em;
     }
 
-    .d-margin-top-2em {
+    #artifact .d-margin-top-2em {
         margin-top: 2em;
     }
 
-    .d-margin-top-4em {
+    #artifact .d-margin-top-4em {
         margin-top: 4em;
     }
 
-    .d-margin-top-8em {
+    #artifact .d-margin-top-8em {
         margin-top: 8em;
     }
 
-    .d-margin-0\.5em {
+    #artifact .d-margin-0\.5em {
         margin: 0 0.5em;
     }
 
-    .d-margin-2em {
+    #artifact .d-margin-2em {
         margin: 0 2em;
     }
 
-    .m-bg-blue,
-    .m-bg-gray-100,
-    .m-bg-gray-200,
-    .m-bg-gray-300,
-    .m-bg-gray-400 {
+    #artifact .m-bg-blue,
+    #artifact .m-bg-gray-100,
+    #artifact .m-bg-gray-200,
+    #artifact .m-bg-gray-300,
+    #artifact .m-bg-gray-400 {
         background-color: transparent;
     }
 
-    .d-bg-gray-100 {
+    #artifact .d-bg-gray-100 {
         background-color: var(--color-gray-100) !important;
     }
 
-    .d-bg-gray-200 {
+    #artifact .d-bg-gray-200 {
         background-color: var(--color-gray-200) !important;
     }
 
-    .d-bg-gray-300 {
+    #artifact .d-bg-gray-300 {
         background-color: var(--color-gray-300) !important;
     }
 
-    .d-bg-gray-400 {
+    #artifact .d-bg-gray-400 {
         background-color: var(--color-gray-400) !important;
     }
 
-    .d-bg-blue {
+    #artifact .d-bg-blue {
         background-color: var(--color-blue) !important;
     }
 
-    .d-bg-white {
+    #artifact .d-bg-white {
         background-color: white !important;
     }
 
-    .d-bg-white-80 {
+    #artifact .d-bg-white-80 {
         background-color: rgba(255, 255, 255, 0.8) !important;
     }
 
-    .d-bg-transparent {
+    #artifact .d-bg-transparent {
         background-color: transparent !important;
     }
 
-    .m-absolute-d-relative {
+    #artifact .m-absolute-d-relative {
         position: relative !important;
     }
 
-    .d-absolute-z_negative {
+    #artifact .d-absolute-z_negative {
         z-index: -1 !important;
     }
 
-    .d-absolute,
-    .d-absolute-z_negative {
+    #artifact .d-absolute,
+    #artifact .d-absolute-z_negative {
         position: absolute !important;
     }
 
-    .d-padding-full-2em {
+    #artifact .d-padding-full-2em {
         padding: 2em;
     }
 }
-
-/*! 
-    \\\\ app
-*/

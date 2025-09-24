@@ -1,10 +1,4 @@
-/*! 
-    base
-    Arquivo de base, com definições mais específicas do layout
-    Pode ser alterado caso necessário
-*/
-
-#intro-wrapper {
+#artifact #intro-wrapper {
     width: 86%;
     min-width: 86%;
     max-width: 86%;
@@ -12,19 +6,19 @@
     overflow: hidden;
 }
 
-#intro-wrapper.top {
+#artifact #intro-wrapper.top {
     top: 4.92%;
 }
 
-#intro-wrapper.bottom {
+#artifact #intro-wrapper.bottom {
     bottom: 4.92%;
 }
 
-#content-wrapper {
+#artifact #content-wrapper {
     width: 90%;
 }
 
-#intro-logo {
+#artifact #intro-logo {
     width: 50.72%;
     min-width: 50.72%;
     max-width: 50.72%;
@@ -32,13 +26,13 @@
     padding-top: 8.75%;
 }
 
-#intro-text {
+#artifact #intro-text {
     margin-top: 5.75%;
     padding: 2.5% 0 5%;
     isolation: isolate;
 }
 
-#intro-text::after {
+#artifact #intro-text::after {
     background-color: var(--color-gray-200);
     position: absolute;
     height: 120%;
@@ -49,141 +43,126 @@
     top: 0;
 }
 
-section {
+#artifact section {
     width: 100%;
     padding: 0 !important;
 }
 
-section #video.video-full-width {
+#artifact section #video.video-full-width {
     width: 100%;
     max-width: 100%;
     aspect-ratio: 16 / 9;
     margin: 0 auto -0.375em !important;
 }
 
-section #video.video-full-width iframe {
+#artifact section #video.video-full-width iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
 }
 
-section #video.video-framed-width {
+#artifact section #video.video-framed-width {
     width: 82.86%;
     max-width: 82.86%;
     aspect-ratio: 16 / 9;
     margin: 12% auto;
 }
 
-section #video.video-framed-width iframe {
+#artifact section #video.video-framed-width iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
 }
 
-#electrolux-technical-details #technical-details-text,
-.electrolux-technical-details .technical-details-text {
+#artifact #electrolux-technical-details #technical-details-text,
+#artifact .electrolux-technical-details .technical-details-text {
     width: 86%;
     padding: 8% 0 0;
 }
 
-#electrolux-technical-details #technical-details-text #technical-info,
-.electrolux-technical-details .technical-details-text .technical-info {
+#artifact #electrolux-technical-details #technical-details-text #technical-info,
+#artifact .electrolux-technical-details .technical-details-text .technical-info {
     width: 100%;
 }
 
-#electrolux-technical-details #technical-details-text #technical-table,
-.electrolux-technical-details .technical-details-text .technical-table {
+#artifact #electrolux-technical-details #technical-details-text #technical-table,
+#artifact .electrolux-technical-details .technical-details-text .technical-table {
     width: 100%;
     padding: 5% 0 0;
 }
 
-#electrolux-technical-details #technical-details-text #technical-table h4,
-.electrolux-technical-details .technical-details-text .technical-table h4 {
+#artifact #electrolux-technical-details #technical-details-text #technical-table h4,
+#artifact .electrolux-technical-details .technical-details-text .technical-table h4 {
     margin: 0 0 5.5% 0;
 }
 
-.table-line {
+#artifact .table-line {
     border-radius: 8px;
     padding: 8px 1.5em 6px 10px;
     margin: 8px 0;
 }
 
-#electrolux-technical-details #technical-details-text #technical-table #table-second-column,
-.electrolux-technical-details .technical-details-text .technical-table .table-second-column {
+#artifact #electrolux-technical-details #technical-details-text #technical-table #table-second-column,
+#artifact .electrolux-technical-details .technical-details-text .technical-table .table-second-column {
     margin: 4% 0 0;
 }
 
-#electrolux-footer {
+#artifact #electrolux-footer {
     width: 100%;
     padding: 12% 0 10%;
 }
 
-#electrolux-footer #footer-logo {
+#artifact #electrolux-footer #footer-logo {
     width: 70%;
     margin: 0 0 5% 0;
 }
 
-#electrolux-footer #footer-info {
+#artifact #electrolux-footer #footer-info {
     white-space: initial;
     width: 79%;
 }
 
-#electrolux-footer #footer-info p {
+#artifact #electrolux-footer #footer-info p {
     margin: 0 0 2px 0;
 }
 
-/*! 
-    360px 
-*/
-@media screen and (min-width: 22.5em) {
-    #content-wrapper {
+@media screen and (min-width: 22.5em /* 360px */) {
+    #artifact #content-wrapper {
         width: 86.5%;
     }
 }
 
-/*! 
-    388px 
-*/
-@media screen and (min-width: 24.25em) {
+@media screen and (min-width: 24.25em /* 388px */) {
 }
 
-/*! 
-    425px 
-*/
-@media screen and (min-width: 26.563em) {
+@media screen and (min-width: 26.563em /* 425px */) {
 }
 
-/*! 
-    578px 
-*/
-@media screen and (min-width: 36.125em) {
+@media screen and (min-width: 36.125em /* 578px */) {
 }
 
-/*! 
-    768px 
-*/
-@media screen and (min-width: 48em) {
-    #intro-wrapper {
+@media screen and (min-width: 48em /* 768px */) {
+    #artifact #intro-wrapper {
         width: 45%;
         min-width: 45%;
         max-width: 45%;
     }
 
-    #intro-wrapper.top {
+    #artifact #intro-wrapper.top {
         top: 11.25%;
     }
 
-    #intro-wrapper.left {
+    #artifact #intro-wrapper.left {
         left: 4.5%;
     }
 
-    #intro-wrapper.right {
+    #artifact #intro-wrapper.right {
         right: 4.5%;
     }
 
-    #intro-wrapper.bottom {
+    #artifact #intro-wrapper.bottom {
         bottom: 9.5%;
     }
 
-    #intro-logo {
+    #artifact #intro-logo {
         width: 65%;
         min-width: 65%;
         max-width: 65%;
@@ -191,14 +170,14 @@ section #video.video-framed-width iframe {
         padding-top: 8.75%;
     }
 
-    section #video.video-framed-width {
+    #artifact section #video.video-framed-width {
         width: 82.86%;
         max-width: 82.86%;
         margin: 5% auto;
     }
 
-    #electrolux-technical-details #technical-details-text,
-    .electrolux-technical-details .technical-details-text {
+    #artifact #electrolux-technical-details #technical-details-text,
+    #artifact .electrolux-technical-details .technical-details-text {
         top: 0;
         left: 8%;
         width: 42%;
@@ -207,114 +186,86 @@ section #video.video-framed-width iframe {
         transform: scale(0.75) translateX(-20%) translateY(0.35em) !important;
     }
 
-    #electrolux-technical-details #technical-details-text #technical-table,
-    .electrolux-technical-details .technical-details-text .technical-table {
+    #artifact #electrolux-technical-details #technical-details-text #technical-table,
+    #artifact .electrolux-technical-details .technical-details-text .technical-table {
         padding: 0;
     }
 
-    .table-line {
+    #artifact .table-line {
         border-radius: 8px;
         padding: 8px 1.25em 6px 10px;
         margin: 6px 0;
     }
 
-    #electrolux-footer {
+    #artifact #electrolux-footer {
         padding: 5% 0;
     }
 
-    #electrolux-footer #footer-logo {
+    #artifact #electrolux-footer #footer-logo {
         width: 25%;
         margin: 0 0 2% 0;
     }
 
-    #electrolux-footer #footer-info {
+    #artifact #electrolux-footer #footer-info {
         width: 92.5%;
     }
 
-    #electrolux-footer #footer-logo {
+    #artifact #electrolux-footer #footer-logo {
         margin: 0 0 3em 0 !important;
         width: 25% !important;
     }
 }
 
-/*! 
-    864px 
-*/
-@media screen and (min-width: 54em) {
-    #intro-wrapper {
+@media screen and (min-width: 54em /* 864px */) {
+    #artifact #intro-wrapper {
         width: 36%;
         min-width: 36%;
         max-width: 36%;
     }
 }
 
-/*! 
-    980px 
-*/
-@media screen and (min-width: 61.25em) {
-    #intro-wrapper {
+@media screen and (min-width: 61.25em /* 980px */) {
+    #artifact #intro-wrapper {
         width: 40%;
         min-width: 40%;
         max-width: 40%;
     }
 
-    #content-wrapper {
+    #artifact #content-wrapper {
         width: 84%;
     }
 
-    #intro-text {
+    #artifact #intro-text {
         margin-top: 2em;
         padding: 3.25% 0 4.5%;
     }
 }
 
-/*! 
-    1024px 
-*/
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 64em /* 1024px */) {
 }
 
-/*! 
-    1200px 
-*/
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 75em /* 1200px */) {
 }
 
-/*! 
-    1280px 
-*/
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 80em /* 1280px */) {
 }
 
-/*! 
-    1374px 
-*/
-@media screen and (min-width: 85.875em) {
-    #intro-wrapper {
+@media screen and (min-width: 85.875em /* 1374px */) {
+    #artifact #intro-wrapper {
         width: 40%;
         min-width: 40%;
         max-width: 40%;
     }
 
-    #intro-logo {
+    #artifact #intro-logo {
         width: 56%;
         min-width: 56%;
         max-width: 56%;
     }
 }
 
-/*! 
-    1428px 
-*/
-@media screen and (min-width: 89.25em) {
+@media screen and (min-width: 89.25em /* 1428px */) {
 }
 
-/*! 
-    1440px 
-*/
-@media screen and (min-width: 90em) {
+@media screen and (min-width: 90em /* 1440px */) {
 }
-
-/*! 
-    \\\\ base
-*/
