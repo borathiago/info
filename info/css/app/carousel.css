@@ -62,18 +62,18 @@
     background: white !important;
 }
 
-#artifact .swiper .swiper-bullets-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet,
-#artifact .swiper .swiper-bullets-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
-#artifact .swiper .swiper-active-bullet-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
-#artifact .swiper .swiper-active-bullet-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
+#artifact .swiper .swiper-bullets-gray .swiper-pagination-bullet.electrolux-swiper-bullet,
+#artifact .swiper .swiper-bullets-gray .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
+#artifact .swiper .swiper-active-bullet-gray .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
+#artifact .swiper .swiper-active-bullet-gray .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
 #artifact .swiper .button-bg-gray {
     background: var(--color-gray-200) !important;
 }
 
-#artifact .swiper .swiper-bullets-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet,
-#artifact .swiper .swiper-bullets-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
-#artifact .swiper .swiper-active-bullet-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
-#artifact .swiper .swiper-active-bullet-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
+#artifact .swiper .swiper-bullets-gray-dark .swiper-pagination-bullet.electrolux-swiper-bullet,
+#artifact .swiper .swiper-bullets-gray-dark .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
+#artifact .swiper .swiper-active-bullet-gray-dark .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
+#artifact .swiper .swiper-active-bullet-gray-dark .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
 #artifact .swiper .button-bg-gray-dark {
     background: var(--color-gray-300) !important;
 }
