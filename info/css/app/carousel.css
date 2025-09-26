@@ -66,7 +66,7 @@
 #artifact .swiper .swiper-bullets-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
 #artifact .swiper .swiper-active-bullet-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
 #artifact .swiper .swiper-active-bullet-gray-200 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
-#artifact .swiper .button-bg-gray-200 {
+#artifact .swiper .button-bg-gray {
     background: var(--color-gray-200) !important;
 }
 
@@ -74,7 +74,7 @@
 #artifact .swiper .swiper-bullets-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered,
 #artifact .swiper .swiper-active-bullet-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet.swiper-pagination-bullet-active,
 #artifact .swiper .swiper-active-bullet-gray-300 .swiper-pagination-bullet.electrolux-swiper-bullet-numbered.swiper-pagination-bullet-active,
-#artifact .swiper .button-bg-gray-300 {
+#artifact .swiper .button-bg-gray-dark {
     background: var(--color-gray-300) !important;
 }
 

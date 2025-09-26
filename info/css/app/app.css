@@ -1,4 +1,4 @@
-#artifact {
+:host {
     --color-gray-100: rgba(223, 231, 234, 1);
     --color-gray-200: rgba(173, 185, 195, 1);
     --color-gray-300: rgba(123, 138, 156, 1);
@@ -32,7 +32,7 @@
     --font-mademsa-bold-oblique: 'Proxima Nova Bold Italic';
 }
 
-#artifact * {
+:host * {
     box-sizing: border-box;
 }
 
@@ -366,23 +366,23 @@
     background-color: var(--color-gray);
 }
 
-#artifact .bg-gray-100,
-#artifact .m-bg-gray-100 {
+#artifact .bg-gray-lighter,
+#artifact .m-bg-gray-lighter {
     background-color: var(--color-gray-100);
 }
 
-#artifact .bg-gray-200,
-#artifact .m-bg-gray-200 {
+#artifact .bg-gray,
+#artifact .m-bg-gray {
     background-color: var(--color-gray-200);
 }
 
-#artifact .bg-gray-300,
-#artifact .m-bg-gray-300 {
+#artifact .bg-gray-dark,
+#artifact .m-bg-gray-dark {
     background-color: var(--color-gray-300);
 }
 
-#artifact .bg-gray-400,
-#artifact .m-bg-gray-400 {
+#artifact .bg-gray-darker,
+#artifact .m-bg-gray-darker {
     background-color: var(--color-gray-400);
 }
 
@@ -431,23 +431,23 @@
     color: var(--color-gray);
 }
 
-#artifact .m-text-gray-100,
-#artifact .text-gray-100 {
+#artifact .m-text-gray-lighter,
+#artifact .text-gray-lighter {
     color: var(--color-gray-100);
 }
 
-#artifact .m-text-gray-200,
-#artifact .text-gray-200 {
+#artifact .m-text-gray-standard,
+#artifact .text-gray-standard {
     color: var(--color-gray-200);
 }
 
-#artifact .m-text-gray-300,
-#artifact .text-gray-300 {
+#artifact .m-text-gray-dark,
+#artifact .text-gray-dark {
     color: var(--color-gray-300);
 }
 
-#artifact .m-text-gray-400,
-#artifact .text-gray-400 {
+#artifact .m-text-gray-darker,
+#artifact .text-gray-darker {
     color: var(--color-gray-400);
 }
 
@@ -1120,26 +1120,26 @@
     }
 
     #artifact .m-bg-blue,
-    #artifact .m-bg-gray-100,
-    #artifact .m-bg-gray-200,
-    #artifact .m-bg-gray-300,
-    #artifact .m-bg-gray-400 {
+    #artifact .m-bg-gray-lighter,
+    #artifact .m-bg-gray,
+    #artifact .m-bg-gray-dark,
+    #artifact .m-bg-gray-darker {
         background-color: transparent;
     }
 
-    #artifact .d-bg-gray-100 {
+    #artifact .d-bg-gray-lighter {
         background-color: var(--color-gray-100) !important;
     }
 
-    #artifact .d-bg-gray-200 {
+    #artifact .d-bg-gray {
         background-color: var(--color-gray-200) !important;
     }
 
-    #artifact .d-bg-gray-300 {
+    #artifact .d-bg-gray-dark {
         background-color: var(--color-gray-300) !important;
     }
 
-    #artifact .d-bg-gray-400 {
+    #artifact .d-bg-gray-darker {
         background-color: var(--color-gray-400) !important;
     }
 
