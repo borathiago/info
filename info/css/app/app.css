@@ -1,4 +1,4 @@
-:host {
+#artifact {
     --color-gray-100: rgba(223, 231, 234, 1);
     --color-gray-200: rgba(173, 185, 195, 1);
     --color-gray-300: rgba(123, 138, 156, 1);
@@ -32,7 +32,7 @@
     --font-mademsa-bold-oblique: 'Proxima Nova Bold Italic';
 }
 
-:host * {
+#artifact * {
     box-sizing: border-box;
 }
 
