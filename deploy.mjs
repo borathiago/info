@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { execSync } from 'child_process'
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, unlinkSync, rmdirSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import readline from 'readline'
@@ -8,7 +8,6 @@ import readline from 'readline'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-/* Carregar configurações */
 const configPath = join(__dirname, 'deploy.config.json')
 let config = {}
 
@@ -33,7 +32,7 @@ function log(message, type = 'info') {
         error: '\x1b[31m',
         reset: '\x1b[0m',
     }
-    console.log(`${colors[type]}:: Deploy ::${colors.reset} ${message}`)
+    console.log(`\n${colors[type]}Deploy ⚡︎${colors.reset}\n${message}`)
 }
 
 async function executeStep(_stepNumber, description, fn) {
@@ -41,7 +40,7 @@ async function executeStep(_stepNumber, description, fn) {
         await fn()
         log(`✓ ${description}`, 'success')
     } catch (error) {
-        log(`✗ ${description}: ${error.message}`, 'error')
+        log(`✗ ${description}\n${error.message}`, 'error')
         throw error
     }
 }
@@ -60,7 +59,6 @@ async function updateImagePaths() {
     const cleanBucketURL = bucketURL.replace(/\/$/, '')
     const newImagePath = `${cleanBucketURL}/img`
 
-    /* Atualizar HTML */
     const indexPath = join(__dirname, 'info', 'index.html')
     let htmlContent = readFileSync(indexPath, 'utf-8')
 
@@ -72,7 +70,6 @@ async function updateImagePaths() {
 
     writeFileSync(indexPath, htmlContent, 'utf-8')
 
-    /* Atualizar config TypeScript */
     const configFilePath = join(__dirname, config.paths.configFile)
     if (existsSync(configFilePath)) {
         let configContent = readFileSync(configFilePath, 'utf-8')
@@ -81,6 +78,16 @@ async function updateImagePaths() {
             `export const imgPath = '${cleanBucketURL}/img'`
         )
         writeFileSync(configFilePath, configContent, 'utf-8')
+    }
+
+    const cssSourcePath = join(__dirname, 'info', 'css', 'electrolux-fonts.css')
+    if (existsSync(cssSourcePath)) {
+        let cssContent = readFileSync(cssSourcePath, 'utf-8')
+        cssContent = cssContent.replace(
+            /url\(\.\/fonts\//g,
+            `url(${cleanBucketURL}/css/fonts/`
+        )
+        writeFileSync(cssSourcePath, cssContent, 'utf-8')
     }
 }
 
@@ -101,7 +108,6 @@ async function extractArtifactContent() {
 
     const htmlContent = readFileSync(productionIndexPath, 'utf-8')
 
-    /* Buscar a article completa do artefato */
     const startTag = `<article id="artifact"`
     const startIndex = htmlContent.indexOf(startTag)
 
@@ -109,7 +115,6 @@ async function extractArtifactContent() {
         throw new Error(`Article com ID "artifact" não encontrada`)
     }
 
-    /* Encontrar o fechamento correto da article */
     let articleCount = 0
     let endIndex = startIndex
     let inTag = false
@@ -148,39 +153,79 @@ async function insertExternalLinks() {
     const productionIndexPath = join(__dirname, config.productionDir, 'index.html')
     let htmlContent = readFileSync(productionIndexPath, 'utf-8')
 
-    /* URLs dos assets externos */
     const assetsUrl = config.assetsUrl.replace(/\/$/, '')
     const cssUrl = `${assetsUrl}/css/electrolux-app.css`
-    const jsUrl = `${assetsUrl}/js/electrolux-app.js`
+    const jsPath = join(__dirname, config.productionDir, 'js', 'electrolux-app.js')
 
-    /* Criar links externos */
+    if (!existsSync(jsPath)) {
+        throw new Error(`JavaScript buildado não encontrado em: ${jsPath}`)
+    }
+
+    const jsContent = readFileSync(jsPath, 'utf-8')
+
     const cssLink = `<link rel="stylesheet" href="${cssUrl}">`
-    const jsScript = `<script src="${jsUrl}"></script>`
+    const inlineScript = `<script>${jsContent}</script>`
 
-    /* CORREÇÃO: Usar regex mais específico que funciona com id="artifact" */
     const articleOpenRegex = /(<article[^>]*id="artifact"[^>]*>)/
     htmlContent = htmlContent.replace(articleOpenRegex, `$1\n    ${cssLink}`)
 
-    /* Inserir JS antes do fechamento da article */
-    htmlContent = htmlContent.replace('</article>', `    ${jsScript}\n</article>`)
+    htmlContent = htmlContent.replace('</article>', `    ${inlineScript}\n</article>`)
+
+    writeFileSync(productionIndexPath, htmlContent, 'utf-8')
+
+    const jsDir = join(__dirname, config.productionDir, 'js')
+
+    if (existsSync(jsPath)) {
+        unlinkSync(jsPath)
+    }
+
+    if (existsSync(jsDir)) {
+        rmdirSync(jsDir)
+    }
+}
+
+async function ensureCharsetDeclaration() {
+    const productionIndexPath = join(__dirname, config.productionDir, 'index.html')
+    let htmlContent = readFileSync(productionIndexPath, 'utf-8')
+
+    const hasCharset = /<meta\s+charset=["']?utf-8["']?\s*\/?>/i.test(htmlContent)
+
+    const hasViewport = /<meta\s+name=["']viewport["']/i.test(htmlContent)
+
+    let metaTags = []
+
+    if (!hasCharset) {
+        metaTags.push('<meta charset="UTF-8">')
+    }
+
+    if (!hasViewport) {
+        metaTags.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">')
+    }
+
+    if (metaTags.length > 0) {
+        const articleOpenRegex = /(<article[^>]*id="artifact"[^>]*>\s*)/
+        const metaTagsString = metaTags.join('\n    ')
+        htmlContent = htmlContent.replace(
+            articleOpenRegex,
+            `$1${metaTagsString}\n    `
+        )
+    }
 
     writeFileSync(productionIndexPath, htmlContent, 'utf-8')
 }
+
 
 async function formatFinalOutput() {
     const productionIndexPath = join(__dirname, config.productionDir, 'index.html')
     let htmlContent = readFileSync(productionIndexPath, 'utf-8')
 
-    /* Remover espaços desnecessários e formatar corretamente */
-    htmlContent = htmlContent.replace(/\n\s*\n/g, '\n') /* Remover linhas vazias extras */
+    htmlContent = htmlContent.replace(/\n\s*\n/g, '\n')
 
-    /* Formatar com indentação consistente */
     const lines = htmlContent.split('\n')
     const formattedLines = []
     let indentLevel = 0
-    const indent = '    ' /* 4 espaços por nível */
+    const indent = '    '
 
-    /* Tags que são self-closing ou não precisam de indentação interna */
     const selfClosingTags = ['img', 'br', 'hr', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source']
     const inlineTags = ['span', 'a', 'strong', 'em', 'b', 'i', 'u', 'small', 'sub', 'sup', 'code']
 
@@ -188,48 +233,35 @@ async function formatFinalOutput() {
         const trimmed = line.trim()
         if (!trimmed) continue
 
-        /* Diminuir indentação para tags de fechamento */
         if (trimmed.startsWith('</')) {
             indentLevel = Math.max(0, indentLevel - 1)
         }
 
-        /* Adicionar linha com indentação apropriada */
         formattedLines.push(indent.repeat(indentLevel) + trimmed)
 
-        /* Aumentar indentação para tags de abertura */
         if (trimmed.startsWith('<') && !trimmed.startsWith('</')) {
-            /* Extrair o nome da tag */
             const tagMatch = trimmed.match(/<(\w+)/)
             const tagName = tagMatch ? tagMatch[1].toLowerCase() : ''
 
-            /* Verificar se é uma tag self-closing ou se fecha na mesma linha */
             const isSelfClosing = trimmed.endsWith('/>') || selfClosingTags.includes(tagName)
             const closesOnSameLine = trimmed.includes(`</${tagName}>`)
             const isInlineTag = inlineTags.includes(tagName)
-
-            /* Casos especiais para script e link */
             const isScriptOrLink = tagName === 'script' || tagName === 'link'
 
-            /* Só aumenta indentação se não for self-closing, não fechar na mesma linha,  */
-            /* não for inline e não for script/link vazio */
             if (!isSelfClosing && !closesOnSameLine && !isInlineTag) {
-                /* Para script, só aumenta se tiver conteúdo */
                 if (tagName === 'script') {
-                    /* Se for script com src (externo), não aumenta indentação */
                     if (!trimmed.includes('src=')) {
                         indentLevel++
                     }
-                } else {
+                } else if (!isScriptOrLink) {
                     indentLevel++
                 }
             }
         }
     }
 
-    /* Juntar as linhas formatadas */
     htmlContent = formattedLines.join('\n')
 
-    /* Garantir quebra de linha no final */
     if (!htmlContent.endsWith('\n')) {
         htmlContent += '\n'
     }
@@ -237,14 +269,56 @@ async function formatFinalOutput() {
     writeFileSync(productionIndexPath, htmlContent, 'utf-8')
 }
 
+async function restoreOriginalPaths() {
+    const bucketURL = config.bucketUrl
+    if (!bucketURL) return
+
+    const cleanBucketURL = bucketURL.replace(/\/$/, '')
+    const bucketImagePath = `${cleanBucketURL}/img`
+
+    const indexPath = join(__dirname, 'info', 'index.html')
+    let htmlContent = readFileSync(indexPath, 'utf-8')
+
+    config.paths.imagesToReplace.forEach(pattern => {
+        const bucketPattern = pattern.replace('./img', bucketImagePath)
+        const regex = new RegExp(bucketPattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')
+        htmlContent = htmlContent.replace(regex, pattern)
+    })
+
+    writeFileSync(indexPath, htmlContent, 'utf-8')
+
+    const configFilePath = join(__dirname, config.paths.configFile)
+    if (existsSync(configFilePath)) {
+        let configContent = readFileSync(configFilePath, 'utf-8')
+        configContent = configContent.replace(
+            /export const imgPath = ['"`][^'"`]*['"`]/g,
+            `export const imgPath = './img'`
+        )
+        writeFileSync(configFilePath, configContent, 'utf-8')
+    }
+
+    const cssSourcePath = join(__dirname, 'info', 'css', 'electrolux-fonts.css')
+    if (existsSync(cssSourcePath)) {
+        let cssContent = readFileSync(cssSourcePath, 'utf-8')
+        const escapedURL = cleanBucketURL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        cssContent = cssContent.replace(
+            new RegExp(`url\\(${escapedURL}/css/fonts/`, 'g'),
+            'url(./fonts/'
+        )
+        writeFileSync(cssSourcePath, cssContent, 'utf-8')
+    }
+}
+
 async function main() {
     try {
         const startTime = Date.now()
-        await executeStep(1, 'Atualizar caminhos das imagens', updateImagePaths)
-        await executeStep(2, 'Executar build Vite', executeViteBuild)
-        await executeStep(3, 'Extrair artefato', extractArtifactContent)
-        await executeStep(4, 'Inserir links externos para CSS e JS', insertExternalLinks)
-        await executeStep(5, 'Formatar artefato', formatFinalOutput)
+        await executeStep(1, 'Caminhos das imagens atualizados', updateImagePaths)
+        await executeStep(2, 'Build do Vite executado', executeViteBuild)
+        await executeStep(3, 'Artefato <article> extraído da index', extractArtifactContent)
+        await executeStep(4, 'CSS e JS inseridos no artefato', insertExternalLinks)
+        await executeStep(5, 'Artefato formatado', formatFinalOutput)
+        await executeStep(6, 'Declaração UTF-8 garantida no artefato', ensureCharsetDeclaration)
+        await executeStep(7, 'Caminhos originais das imagens restaurados na index e no TypeScript', restoreOriginalPaths)
         const duration = ((Date.now() - startTime) / 1000).toFixed(2)
         const finalPath = join(__dirname, config.productionDir, 'index.html')
         const finalSize = (readFileSync(finalPath, 'utf-8').length / 1024).toFixed(2)

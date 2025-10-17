@@ -1,0 +1,23 @@
+#artifact section .video-full-width {
+    width: 100%;
+    min-width: 100%;
+}
+
+#artifact section .video-framed-width {
+    width: 86.04651163%;
+    max-width: 86.04651163%;
+    margin: 5% auto;
+}
+
+#artifact section .video-full-width iframe,
+#artifact section .video-framed-width iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+@container (min-width: 48em /* 768px */) {
+    #artifact section .video-framed-width {
+        width: 71.35416667%;
+        max-width: 71.35416667%;
+    }
+}

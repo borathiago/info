@@ -1,0 +1,115 @@
+#artifact .grid {
+    display: grid;
+}
+
+#artifact .d-display-grid {
+    display: none;
+}
+
+#artifact .grid-m-1-d-2,
+#artifact .grid-m-1-d-3,
+#artifact .grid-m-1-d-4,
+#artifact .grid-m-1-d-5 {
+    grid-template-columns: repeat(1, 1fr);
+}
+#artifact .grid-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+#artifact .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+#artifact .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+#artifact .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#artifact .grid-item-normal {
+    order: 1;
+}
+#artifact .grid-item-reverse {
+    order: -1;
+}
+
+#artifact .grid-justify-strech {
+    justify-self: stretch;
+}
+
+#artifact .flex {
+    display: flex;
+}
+
+#artifact .m-display-flex {
+    display: flex;
+}
+
+#artifact .direction-row,
+#artifact .m-direction-row {
+    flex-direction: row;
+}
+
+#artifact .direction-column,
+#artifact .m-direction-column {
+    flex-direction: column;
+}
+
+#artifact .direction-row-reverse,
+#artifact .m-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+#artifact .direction-column-reverse,
+#artifact .m-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+#artifact .justify-center,
+#artifact .m-justify-center {
+    justify-content: center;
+}
+
+#artifact .justify-between,
+#artifact .m-justify-between {
+    justify-content: space-between;
+}
+
+#artifact .justify-start,
+#artifact .m-justify-start {
+    justify-content: flex-start;
+}
+
+#artifact .justify-end,
+#artifact .m-justify-end {
+    justify-content: flex-end;
+}
+
+#artifact .justify-around,
+#artifact .m-justify-around {
+    justify-content: space-around;
+}
+
+#artifact .justify-evenly,
+#artifact .m-justify-evenly {
+    justify-content: space-evenly;
+}
+
+#artifact .align-center,
+#artifact .m-align-center {
+    align-items: center;
+}
+
+#artifact .align-start,
+#artifact .m-align-start {
+    align-items: flex-start;
+}
+
+#artifact .align-stretch,
+#artifact .m-align-stretch {
+    align-items: stretch;
+}
+
+#artifact .align-end,
+#artifact .m-align-end {
+    align-items: flex-end;
+}

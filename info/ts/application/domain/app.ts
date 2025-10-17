@@ -90,7 +90,6 @@ export class App implements AppRepository {
     setModules(): Set<HTMLElement | Element> {
         const set = new Set<HTMLElement | Element>()
         const modules = handler.listItems('[module]', 'all')
-        console.log(':: modules ::', modules)
         if (!modules) {
             throw new ApplicationError('Nenhum módulo foi encontrado')
         }
@@ -135,8 +134,8 @@ export class App implements AppRepository {
     getInstanceData(): AppInstanceDetails {
         const { deviceIs } = this.validateDevice()
         return {
-            appId: this.instanceId,
-            oppenedAt: deviceIs as DevicesType,
+            appInstanceId: this.instanceId,
+            device: deviceIs as DevicesType,
         }
     }
 }

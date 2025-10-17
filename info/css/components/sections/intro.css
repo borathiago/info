@@ -1,0 +1,73 @@
+#artifact .intro {
+    width: 86.04651163%;
+}
+
+#artifact .intro .intro-logo {
+    max-width: 39.86486486%;
+    margin: 5% 5% 0;
+}
+
+#artifact .intro .intro-content {
+    padding: 4% 5% 3.5%;
+}
+
+#artifact .intro .intro-aside {
+    padding: 3% 5%;
+}
+
+#artifact .intro.intro-top,
+#artifact .intro.intro.m-intro-top {
+    top: 5%;
+}
+#artifact .intro.intro-bottom,
+#artifact .intro.m-intro-bottom {
+    top: 5%;
+}
+#artifact .intro.intro-left,
+#artifact .intro.m-intro-left {
+    left: 7%;
+}
+#artifact .intro.intro-right
+#artifact .intro.m-intro-right {
+    right: 7%;
+}
+
+@container (min-width: 48em /* 768px */) {
+    #artifact .intro {
+        width: 100%;
+        max-width: 39.32291667%;
+        aspect-ratio: 755 / 565;
+    }
+
+    #artifact .intro .intro-logo {
+        max-width: 41.05960265%;
+        margin: 8% 7.5% 0;
+    }
+
+    #artifact .intro .intro-content {
+        padding: 6% 7.5% 4.5%;
+    }
+
+    #artifact .intro .intro-aside {
+        padding: 2.5% 7.5%;
+    }
+
+    #artifact .intro.intro-left {
+        left: 6.375%;
+    }
+    #artifact .intro.intro-right {
+        right: 6.385%;
+    }
+    #artifact .intro.intro.m-intro-top {
+        top: auto;
+    }
+    #artifact .intro.m-intro-bottom {
+        top: auto;
+    }
+    #artifact .intro.m-intro-left {
+        left: auto;
+    }
+    #artifact .intro.m-intro-right {
+        right: auto;
+    }
+}

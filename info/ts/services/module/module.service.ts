@@ -1,31 +1,33 @@
-import { Modal } from '../../application/domain/modal'
 import { ApplicationError } from '../../application/errors/application.error'
 import { CarouselTypes } from '../../application/schemas/carousel.schema'
 import { handler } from '../../application/utils/handler/handler'
 import { carouselClass, carouselLib, modalUI } from '../../config'
-import { initCarousel } from '../libs'
+import { createCarouselFactory } from './factories/carousel.factory'
+import { createModalFactory } from './factories/modal.factory'
 
 const processedModules = new Set<HTMLElement>()
 
-export const initModuleEvents = (module: HTMLElement) => {
+export const startModuleEventsService = (module: HTMLElement) => {
     if (processedModules.has(module)) {
         return
     }
     processedModules.add(module)
-    const id = module.getAttribute('id')
-    if (!id) {
-        throw new ApplicationError(`O módulo "${module}" não possui id`)
+    const moduleID = module.getAttribute('id')
+    if (!moduleID) {
+        throw new ApplicationError(`Módulo não possui id.`)
     }
     const hasCarousel = module.hasAttribute('carousel')
     const hasModal = module.hasAttribute('modal')
     if (hasCarousel) {
-        const carousel = `#${id} .${carouselClass}`
+        const lib = carouselLib
+        const formattedCarouselClass = handler.formatSelector(carouselClass, 'class')
+        const formattedModuleID = handler.formatSelector(moduleID, 'id')
+        const carousel = `${formattedModuleID} ${formattedCarouselClass}`
         const type = module.getAttribute('carousel')! as CarouselTypes
         const randomID = handler.createRandomString(Number(type.length))
-        const lib = carouselLib
-        initCarousel({ carousel, lib, type, randomID })
+        createCarouselFactory({ carousel, lib, type, randomID })
     }
     if (hasModal) {
-        new Modal({ moduleID: id, modalUI })
+        createModalFactory({ moduleID, modalUI })
     }
 }

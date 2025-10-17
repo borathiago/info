@@ -1,0 +1,30 @@
+#artifact .product-content-box {
+    width: 86.04651163%;
+}
+
+#artifact .product-table {
+    width: 100%;
+}
+
+#artifact .grid-product-right,
+#artifact .grid-product-left {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@container (min-width: 48em /* 768px */) {
+    #artifact .grid-product-right {
+        grid-template-columns: auto 58.85416667%;
+    }
+    
+    #artifact .grid-product-left {
+        grid-template-columns: 58.85416667% auto;
+    }
+    
+    #artifact .product-content-box {
+        width: 72.40506329%;
+    }
+
+    #artifact .product-table {
+        width: 96.15384615%;
+    }
+}

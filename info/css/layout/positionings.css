@@ -1,0 +1,78 @@
+#artifact .relative {
+    position: relative;
+}
+
+#artifact .absolute,
+#artifact .m-absolute {
+    position: absolute;
+    z-index: 20;
+}
+
+#artifact .fixed {
+    position: fixed;
+    z-index: 999999 !important;
+}
+
+#artifact .top-0 {
+    top: 0;
+}
+#artifact .right-0 {
+    right: 0;
+}
+#artifact .bottom-0 {
+    bottom: 0;
+}
+#artifact .left-0 {
+    left: 0;
+}
+
+#artifact .top-0-right-0 {
+    top: 0;
+    right: 0;
+}
+
+#artifact .bottom-0-right-0 {
+    bottom: 0;
+    right: 0;
+}
+
+#artifact .top-0-left-0 {
+    top: 0;
+    left: 0;
+}
+
+#artifact .bottom-0-left-0 {
+    bottom: 0;
+    left: 0;
+}
+
+#artifact .m-top-0 {
+    top: 0;
+}
+#artifact .m-bottom-0 {
+    bottom: 0;
+}
+
+#artifact .z-1 {
+    z-index: 1;
+}
+#artifact .z-20 {
+    z-index: 20 !important;
+}
+#artifact .z-50 {
+    z-index: 50 !important;
+}
+#artifact .z-100 {
+    z-index: 100 !important;
+}
+#artifact .-z-1 {
+    z-index: -1 !important;
+}
+#artifact .isolate {
+    isolation: isolate;
+}
+
+#artifact .-absolute-z {
+    position: absolute;
+    z-index: -1 !important;
+}

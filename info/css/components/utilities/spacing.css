@@ -1,0 +1,251 @@
+#artifact .padding-full-0\.25em {
+    padding: 0.25em;
+}
+#artifact .padding-full-0\.5em,
+#artifact .m-padding-full-0\.5em {
+    padding: 0.5em;
+}
+#artifact .padding-full-1em,
+#artifact .m-padding-full-1em {
+    padding: 1em;
+}
+#artifact .padding-full-2em,
+#artifact .m-padding-full-2em {
+    padding: 2em;
+}
+#artifact .padding-full-3em,
+#artifact .m-padding-full-3em {
+    padding: 3em;
+}
+
+#artifact .padding-1em-3em,
+#artifact .m-padding-1em-3em {
+    padding: 1em 3em;
+}
+
+#artifact .padding-1\.5em-0 {
+    padding: 1.5em 0;
+}
+#artifact .padding-2em-0 {
+    padding: 2em 0;
+}
+#artifact .padding-3em-0 {
+    padding: 3em 0;
+}
+
+#artifact .padding-full-2\.25em {
+    padding: 2.25em;
+}
+#artifact .padding-full-4em {
+    padding: 4em;
+}
+
+#artifact .padding-top-0\.25em {
+    padding-top: 0.25em;
+}
+#artifact .padding-top-0\.5em,
+#artifact .m-padding-top-0\.5em {
+    padding-top: 0.5em;
+}
+#artifact .padding-top-1em,
+#artifact .m-padding-top-1em {
+    padding-top: 1em;
+}
+#artifact .padding-top-1\.5em {
+    padding-top: 1.5em;
+}
+#artifact .padding-top-2em,
+#artifact .m-padding-top-2em {
+    padding-top: 2em;
+}
+
+#artifact .padding-left-0\.5em,
+#artifact .m-padding-left-0\.5em {
+    padding-left: 0.5em;
+}
+#artifact .padding-left-1em,
+#artifact .m-padding-left-1em {
+    padding-left: 1em;
+}
+#artifact .padding-left-2em,
+#artifact .m-padding-left-2em {
+    padding-left: 2em;
+}
+#artifact .padding-left-3em,
+#artifact .m-padding-left-3em {
+    padding-left: 3em;
+}
+#artifact .padding-left-4em,
+#artifact .m-padding-left-4em {
+    padding-left: 4em;
+}
+#artifact .padding-right-0\.5em,
+#artifact .m-padding-right-0\.5em {
+    padding-right: 0.5em;
+}
+#artifact .padding-right-1em,
+#artifact .m-padding-right-1em {
+    padding-right: 1em;
+}
+#artifact .padding-right-2em,
+#artifact .m-padding-right-2em {
+    padding-right: 2em;
+}
+#artifact .padding-right-3em,
+#artifact .m-padding-right-3em {
+    padding-right: 3em;
+}
+#artifact .padding-right-4em,
+#artifact .m-padding-right-4em {
+    padding-right: 4em;
+}
+
+#artifact .padding-bottom-0\.5em {
+    padding-bottom: 0.5em;
+}
+#artifact .padding-bottom-1em,
+#artifact .m-padding-bottom-1em {
+    padding-bottom: 1em;
+}
+#artifact .padding-bottom-1\.5em {
+    padding-bottom: 1.5em;
+}
+#artifact .padding-bottom-2em {
+    padding-bottom: 2em;
+}
+
+#artifact .padding-0\.5em-1em {
+    padding: 0.5em 1em;
+}
+#artifact .padding-1em-2em {
+    padding: 1em 2em;
+}
+#artifact .padding-top-2em {
+    padding-top: 2em;
+}
+
+#artifact .padding-bottom-0\.75em {
+    padding-bottom: 0.75em;
+}
+#artifact .padding-bottom-1em {
+    padding-bottom: 1em;
+}
+#artifact .padding-bottom-2em {
+    padding-bottom: 2em;
+}
+#artifact .padding-bottom-3em {
+    padding-bottom: 3em;
+}
+#artifact .padding-bottom-4em {
+    padding-bottom: 4em;
+}
+
+#artifact .m-padding-2em-0,
+#artifact .padding-2em-0 {
+    padding: 2em 0;
+}
+#artifact .m-padding-4em-0,
+#artifact .padding-4em-0 {
+    padding: 4em 0;
+}
+#artifact .m-padding-8em-0,
+#artifact .padding-8em-0 {
+    padding: 8em 0;
+}
+#artifact .m-padding-9em-0,
+#artifact .padding-9em-0 {
+    padding: 9em 0;
+}
+#artifact .m-padding-12em-0,
+#artifact .padding-12em-0 {
+    padding: 12em 0;
+}
+#artifact .padding-2\.25em-0 {
+    padding: 2.25em 0;
+}
+
+#artifact .margin-bottom-0\.5em {
+    margin-bottom: 0.5em;
+}
+#artifact .margin-bottom-1em {
+    margin-bottom: 1em;
+}
+#artifact .m-margin-bottom-2em,
+#artifact .margin-bottom-2em {
+    margin-bottom: 2em;
+}
+#artifact .margin-bottom-4em {
+    margin-bottom: 4em;
+}
+
+#artifact .margin-0\.5em-0 {
+    margin: 0.5em 0;
+}
+#artifact .margin-0\.75em-0 {
+    margin: 0.75em 0;
+}
+#artifact .margin-1em-0 {
+    margin: 1em 0;
+}
+#artifact .margin-2em-0 {
+    margin: 2em 0;
+}
+
+#artifact .m-margin-top-0\.25em,
+#artifact .margin-top-0\.25em {
+    margin-top: 0.25em;
+}
+#artifact .m-margin-top-0\.5em,
+#artifact .margin-top-0\.5em {
+    margin-top: 0.5em;
+}
+#artifact .m-margin-top-0\.75em,
+#artifact .margin-top-0\.75em {
+    margin-top: 0.75em;
+}
+#artifact .margin-top-1em,
+#artifact .m-margin-top-1em {
+    margin-top: 1em;
+}
+#artifact .m-margin-top-1\.5em,
+#artifact .margin-top-1\.5em {
+    margin-top: 1.5em;
+}
+#artifact .margin-top-2em {
+    margin-top: 2em;
+}
+#artifact .margin-top-4em,
+#artifact .m-margin-top-4em {
+    margin-top: 4em;
+}
+#artifact .margin-top-8em {
+    margin-top: 8em;
+}
+
+#artifact .m-margin-x-0\.25em,
+#artifact .margin-x-0\.25em {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+#artifact .m-margin-x-0\.5em,
+#artifact .margin-x-0\.5em {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+#artifact .m-margin-x-1em,
+#artifact .margin-x-1em {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+#artifact .m-margin-x-2em,
+#artifact .margin-x-2em {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#artifact .margin-0\.5em {
+    margin: 0 0.5em;
+}
+#artifact .margin-2em {
+    margin: 0 2em;
+}

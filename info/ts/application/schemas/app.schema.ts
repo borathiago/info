@@ -4,8 +4,8 @@ import z from 'zod'
 export type AppBrandType = z.infer<typeof LayoutSchema>
 
 export const AppInstanceDetailsSchema = z.object({
-    appId: z.string(),
-    oppenedAt: z.string(),
+    appInstanceId: z.string(),
+    device: z.string(),
 })
 
 export type AppInstanceDetails = z.infer<typeof AppInstanceDetailsSchema>
@@ -42,8 +42,7 @@ export const DeviceResponseSchema = z.object({
 export type DeviceSchema = z.infer<typeof DeviceResponseSchema>
 
 export const InstanceDataSchema = z.object({
-    appId: z.string(),
-    device: DevicesTypeSchema,
-    oppenedAt: z.string(),
+    appInstanceId: z.string(),
+    device: DevicesTypeSchema
 })
 export type InstanceDataType = z.infer<typeof InstanceDataSchema>

@@ -21,7 +21,8 @@
     --swiper-theme-color: #007aff;
 }
 
-#artifact:host {
+:host #artifact,
+:root #artifact {
     position: relative;
     display: block;
     margin-left: auto;

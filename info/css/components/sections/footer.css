@@ -1,0 +1,30 @@
+#artifact .footer-logo {
+    width: 69.06976744%;
+    max-width: 297px;
+    margin: 17% 0;
+}
+
+#artifact .footer-info-content {
+    width: 87.90697674%;
+    margin: 0 0 10%;
+}
+
+#artifact .footer-info-text {
+    max-width: 100% !important;
+}
+
+#artifact .footer-info-text > p {
+    display: inline !important;
+}
+
+@container (min-width: 48em /* 768px */) {
+    #artifact .footer-logo {
+        width: 15.46875%;
+        margin: 4% 0;
+    }
+
+    #artifact .footer-info-content {
+        width: 56.51041667%;
+        margin: 0 0 4%;
+    }
+}

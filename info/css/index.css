@@ -1,31 +1,67 @@
-@import './libs/reset.css';
+@charset 'utf-8';
+@import './config/custom-properties.css';
+
+@import './layout/grid-system.css';
+@import './layout/positionings.css';
+
 @import './libs/swiper.css';
-@import './app/fonts.css';
-@import './app/app.css';
-@import './app/base.css';
-@import './app/carousel.css';
-@import './app/modal.css';
 
-@media screen and (min-width: 22.5em /* 360px */) {
+@import './components/utilities/spacing.css';
+
+@import './components/sections/carousel.css';
+@import './components/sections/modal.css';
+@import './components/sections/intro.css';
+@import './components/sections/video.css';
+@import './components/sections/product.css';
+@import './components/sections/footer.css';
+
+@import './components/utilities/typography.css';
+
+@import './config/breakpoints.css';
+
+
+#artifact .grid-text-content {
+    width: 72.8372093%;
 }
 
-@media screen and (min-width: 26.563em /* 425px */) {
+#artifact .grid-text-padding {
+    padding: 4.5% 5%;
 }
 
-@media screen and (min-width: 48em /* 768px */) {
+@container (min-width: 22.5em /* 360px */) {}
+
+@container (min-width: 23.438em /* 375px */) {}
+
+@container (min-width: 25.875em /* 414px */) {}
+
+@container (min-width: 26.875em /* 430px */) {}
+
+@container (min-width: 29.75em /* 476px */) {}
+
+@container (min-width: 32.813em /* 525px */) {}
+
+@container (min-width: 37.5em /* 600px */) {}
+
+@container (min-width: 44.5em /* 712px */) {}
+
+@container (min-width: 48em /* 768px */) {
+    #artifact .grid-text-content {
+        width: 72.15189873%;
+    }
+
+    #artifact .grid-text-padding {
+        padding: 6% 8%;
+    }
 }
 
-@media screen and (min-width: 61.25em /* 980px */) {
-}
+@container (min-width: 54em /* 864px */) {}
 
-@media screen and (min-width: 75em /* 1200px */) {
-}
+@container (min-width: 61.25em /* 980px */) {}
 
-@media screen and (min-width: 80em /* 1280px */) {
-}
+@container (min-width: 75em /* 1200px */) {}
 
-@media screen and (min-width: 85.875em /* 1374px */) {
-}
+@container (min-width: 80em /* 1280px */) {}
 
-@media screen and (min-width: 90em /* 1440px */) {
-}
+@container (min-width: 85.875em /* 1374px */) {}
+
+@container (min-width: 90em /* 1440px */) {}
